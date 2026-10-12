@@ -26,7 +26,7 @@
   "hero": {
     "greeting": "Hola, soc",
     "name": "Sergi Serra",
-    "role": "[EDITAR] Enginyer de Software / Desenvolupador Full-Stack",
+    "role": "Cloud Engineer",
     "tagline": "[EDITAR] Construeixo aplicacions web robustes i escalables, amb cura pel detall, el rendiment i l'experiència d'usuari.",
     "ctaProjects": "Veure projectes",
     "ctaContact": "Contacta amb mi"
@@ -37,9 +37,9 @@
     "paragraph2": "[EDITAR] Tinc experiència en el desenvolupament d'aplicacions web de principi a fi, des del disseny de l'arquitectura fins al desplegament. Afegeix aquí la teva formació, anys d'experiència i àmbits en què t'has especialitzat.",
     "highlightsTitle": "En poques paraules",
     "highlights": [
-      "[EDITAR] +X anys d'experiència en desenvolupament de software",
-      "[EDITAR] Especialitzat en aplicacions web i APIs",
-      "[EDITAR] Enfocament en qualitat, proves i bones pràctiques"
+      "+4 anys d'experiència en Google Cloud Platform",
+      "Especialitzat en migracions de workloads a cloud",
+      "Enfocament en seguir bones pràctiques de seguretat"
     ]
   },
   "skills": {
