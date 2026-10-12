@@ -26,7 +26,7 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Sergi Serra",
-    "role": "[EDITAR] Ingeniero de Software / Desarrollador Full-Stack",
+    "role": "Cloud Engineer",
     "tagline": "[EDITAR] Construyo aplicaciones web robustas y escalables, con atención al detalle, el rendimiento y la experiencia de usuario.",
     "ctaProjects": "Ver proyectos",
     "ctaContact": "Contacta conmigo"
@@ -37,9 +37,9 @@
     "paragraph2": "[EDITAR] Tengo experiencia en el desarrollo de aplicaciones web de principio a fin, desde el diseño de la arquitectura hasta el despliegue. Añade aquí tu formación, años de experiencia y ámbitos en los que te has especializado.",
     "highlightsTitle": "En pocas palabras",
     "highlights": [
-      "[EDITAR] +X años de experiencia en desarrollo de software",
-      "[EDITAR] Especializado en aplicaciones web y APIs",
-      "[EDITAR] Enfoque en calidad, pruebas y buenas prácticas"
+      "+4 años de experiencia en Google Cloud Platform",
+      "[EDITAR] Especializado en migraciones de workloads a cloud",
+      "[EDITAR] Enfoque en seguir buenas prácticas de seguridad"
     ]
   },
   "skills": {
@@ -47,20 +47,12 @@
     "intro": "[EDITAR] Estas son algunas de las tecnologías y herramientas con las que trabajo.",
     "categories": [
       {
-        "name": "Lenguajes",
-        "items": ["JavaScript", "TypeScript", "Python", "[EDITAR] Java"]
-      },
-      {
-        "name": "Frontend",
-        "items": ["Astro", "React", "HTML5", "CSS3"]
-      },
-      {
-        "name": "Backend",
-        "items": ["Node.js", "[EDITAR] FastAPI", "[EDITAR] Express", "REST APIs"]
+        "name": "Plataformas Cloud",
+        "items": ["Google Cloud Platform", "Starting in AWS"]
       },
       {
         "name": "Herramientas y DevOps",
-        "items": ["Git", "Docker", "[EDITAR] CI/CD", "[EDITAR] AWS"]
+        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions"]
       }
     ]
   },

@@ -37,30 +37,22 @@
     "paragraph2": "[EDITAR] I have experience developing web applications end to end, from architecture design to deployment. Add your education, years of experience and areas of specialization here.",
     "highlightsTitle": "In a nutshell",
     "highlights": [
-      "[EDITAR] +X years of experience in software development",
-      "[EDITAR] Specialized in web applications and APIs",
-      "[EDITAR] Focus on quality, testing and best practices"
+      "+4 years of experience in Google Cloud Platform",
+      "Specialized in migrating workloads to the cloud",
+      "Focus on applying best practices in security"
     ]
   },
   "skills": {
     "title": "Skills & technologies",
-    "intro": "[EDITAR] These are some of the technologies and tools I work with.",
+    "intro": "These are some of the technologies and tools I work with.",
     "categories": [
       {
-        "name": "Languages",
-        "items": ["JavaScript", "TypeScript", "Python", "[EDITAR] Java"]
-      },
-      {
-        "name": "Frontend",
-        "items": ["Astro", "React", "HTML5", "CSS3"]
-      },
-      {
-        "name": "Backend",
-        "items": ["Node.js", "[EDITAR] FastAPI", "[EDITAR] Express", "REST APIs"]
+        "name": "Cloud Platforms",
+        "items": ["Google Cloud Platform", "Starting in AWS"]
       },
       {
         "name": "Tools & DevOps",
-        "items": ["Git", "Docker", "[EDITAR] CI/CD", "[EDITAR] AWS"]
+        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions"]
       }
     ]
   },

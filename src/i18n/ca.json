@@ -37,30 +37,22 @@
     "paragraph2": "[EDITAR] Tinc experiència en el desenvolupament d'aplicacions web de principi a fi, des del disseny de l'arquitectura fins al desplegament. Afegeix aquí la teva formació, anys d'experiència i àmbits en què t'has especialitzat.",
     "highlightsTitle": "En poques paraules",
     "highlights": [
-      "+4 anys d'experiència en Google Cloud Platform",
+      "+4 anys d'experiència amb Google Cloud Platform",
       "Especialitzat en migracions de workloads a cloud",
       "Enfocament en seguir bones pràctiques de seguretat"
     ]
   },
   "skills": {
     "title": "Habilitats i tecnologies",
-    "intro": "[EDITAR] Aquestes són algunes de les tecnologies i eines amb què treballo.",
+    "intro": "Aquestes són algunes de les tecnologies i eines amb què treballo.",
     "categories": [
       {
-        "name": "Llenguatges",
-        "items": ["JavaScript", "TypeScript", "Python", "[EDITAR] Java"]
+        "name": "Platarformes Cloud",
+        "items": ["Google Cloud Platform", "Starting in AWS"]
       },
       {
-        "name": "Frontend",
-        "items": ["Astro", "React", "HTML5", "CSS3"]
-      },
-      {
-        "name": "Backend",
-        "items": ["Node.js", "[EDITAR] FastAPI", "[EDITAR] Express", "REST APIs"]
-      },
-      {
-        "name": "Eines i DevOps",
-        "items": ["Git", "Docker", "[EDITAR] CI/CD", "[EDITAR] AWS"]
+        "name": "Eines & DevOps",
+        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions"]
       }
     ]
   },
