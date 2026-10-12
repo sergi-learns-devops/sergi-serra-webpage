@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "Sergi Serra — Perfil professional TI",
+    "description": "Pàgina personal de Sergi Serra. Perfil professional orientat a tecnologies de la informació: experiència, habilitats i projectes."
+  },
+  "nav": {
+    "about": "Sobre mi",
+    "skills": "Habilitats",
+    "projects": "Projectes",
+    "vibe": "Vibe Coding",
+    "contact": "Contacte",
+    "skipToContent": "Salta al contingut principal",
+    "menu": "Menú de navegació"
+  },
+  "theme": {
+    "toggle": "Canvia el tema clar/fosc",
+    "light": "Tema clar",
+    "dark": "Tema fosc"
+  },
+  "language": {
+    "label": "Selecciona l'idioma",
+    "ca": "Català",
+    "en": "English",
+    "es": "Castellà"
+  },
+  "hero": {
+    "greeting": "Hola, soc",
+    "name": "Sergi Serra",
+    "role": "[EDITAR] Enginyer de Software / Desenvolupador Full-Stack",
+    "tagline": "[EDITAR] Construeixo aplicacions web robustes i escalables, amb cura pel detall, el rendiment i l'experiència d'usuari.",
+    "ctaProjects": "Veure projectes",
+    "ctaContact": "Contacta amb mi"
+  },
+  "about": {
+    "title": "Sobre mi",
+    "paragraph1": "[EDITAR] Soc un professional de les tecnologies de la informació amb passió per resoldre problemes complexos mitjançant codi net i solucions ben dissenyades. M'agrada treballar en equip i aprendre contínuament.",
+    "paragraph2": "[EDITAR] Tinc experiència en el desenvolupament d'aplicacions web de principi a fi, des del disseny de l'arquitectura fins al desplegament. Afegeix aquí la teva formació, anys d'experiència i àmbits en què t'has especialitzat.",
+    "highlightsTitle": "En poques paraules",
+    "highlights": [
+      "[EDITAR] +X anys d'experiència en desenvolupament de software",
+      "[EDITAR] Especialitzat en aplicacions web i APIs",
+      "[EDITAR] Enfocament en qualitat, proves i bones pràctiques"
+    ]
+  },
+  "skills": {
+    "title": "Habilitats i tecnologies",
+    "intro": "[EDITAR] Aquestes són algunes de les tecnologies i eines amb què treballo.",
+    "categories": [
+      {
+        "name": "Llenguatges",
+        "items": ["JavaScript", "TypeScript", "Python", "[EDITAR] Java"]
+      },
+      {
+        "name": "Frontend",
+        "items": ["Astro", "React", "HTML5", "CSS3"]
+      },
+      {
+        "name": "Backend",
+        "items": ["Node.js", "[EDITAR] FastAPI", "[EDITAR] Express", "REST APIs"]
+      },
+      {
+        "name": "Eines i DevOps",
+        "items": ["Git", "Docker", "[EDITAR] CI/CD", "[EDITAR] AWS"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projectes",
+    "intro": "[EDITAR] Una selecció de projectes en què he treballat. Substitueix-los pels teus.",
+    "viewProject": "Veure projecte",
+    "items": [
+      {
+        "name": "[EDITAR] Projecte 1",
+        "description": "[EDITAR] Descripció breu del projecte, el problema que resol i el teu paper.",
+        "tags": ["Astro", "TypeScript"],
+        "url": "#"
+      },
+      {
+        "name": "[EDITAR] Projecte 2",
+        "description": "[EDITAR] Descripció breu del projecte, les tecnologies emprades i els resultats.",
+        "tags": ["Node.js", "API"],
+        "url": "#"
+      },
+      {
+        "name": "[EDITAR] Projecte 3",
+        "description": "[EDITAR] Descripció breu del projecte i del seu impacte.",
+        "tags": ["React", "Docker"],
+        "url": "#"
+      }
+    ]
+  },
+  "vibe": {
+    "title": "Vibe Coding",
+    "intro": "Aquesta web —i altres projectes del meu GitHub— està desenvolupada amb assistència d'intel·ligència artificial. Crec en la transparència: no amago l'ús d'IA, sinó que el presento com una competència que domino. El valor no és «generar codi», sinó dirigir les eines amb criteri tècnic, definir bons requisits i verificar el resultat.",
+    "workflowTitle": "Workflow i stack real",
+    "workflowIntro": "Flux de treball que vaig fer servir per desplegar aquesta mateixa web:",
+    "steps": [
+      {
+        "name": "Orquestració via prompt",
+        "description": "Vaig definir els requisits en llenguatge natural: web amb Astro, multiidioma (CA/EN/ES), mode clar/fosc, enllaços a LinkedIn i GitHub, disseny professional orientat a TI, accessible i responsive."
+      },
+      {
+        "name": "Agents especialitzats en pipeline",
+        "description": "Kiro CLI va orquestrar diversos agents d'IA en cadena: desenvolupament full-stack → disseny UI/UX → QA. Cada agent, especialitzat en la seva tasca."
+      },
+      {
+        "name": "Verificació i control humà",
+        "description": "Build net (Astro), proves visuals automatitzades amb Playwright i revisió d'accessibilitat (contrast AA, HTML semàntic). La decisió i la validació finals són humanes."
+      }
+    ],
+    "stackTitle": "Stack tècnic",
+    "stack": ["Astro", "TypeScript", "i18n natiu d'Astro", "CSS (variables de tema)", "Kiro CLI (agents d'IA)", "Playwright (QA)"],
+    "promptTitle": "El prompt real",
+    "promptIntro": "Aquesta és, en essència, la petició amb què va néixer la web:",
+    "promptText": "«Vull crear la meva pàgina web amb Astro per donar-me visibilitat de cara a una futura feina. Sobre el disseny, que sigui atractiu, professional i orientat a TI, agradable a la vista i de lectura fàcil. Que estigui disponible en català, anglès i castellà, amb botons cap al meu LinkedIn i GitHub, i que es pugui alternar entre mode clar i fosc.»",
+    "howTo": "Com s'ha fet això?",
+    "projectsTitle": "Altres projectes vibe-codejats",
+    "projectsIntro": "Altres projectes del meu GitHub desenvolupats amb aquest mateix enfocament:",
+    "projects": [
+      {
+        "name": "ProgramacioDocent",
+        "description": "[EDITAR] Breu descripció del projecte i del seu propòsit.",
+        "url": "https://github.com/sergi-learns-devops/ProgramacioDocent"
+      },
+      {
+        "name": "kumo",
+        "description": "[EDITAR] Breu descripció del projecte i del seu propòsit.",
+        "url": "https://github.com/sergi-learns-devops/kumo"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacte",
+    "intro": "[EDITAR] Estàs buscant algú com jo? M'encantarà parlar amb tu. Pots contactar-me pels següents canals.",
+    "emailLabel": "Correu electrònic",
+    "email": "s.serramarques@gmail.com",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub"
+  },
+  "footer": {
+    "rights": "Tots els drets reservats.",
+    "builtWith": "Fet amb Astro."
+  }
+}

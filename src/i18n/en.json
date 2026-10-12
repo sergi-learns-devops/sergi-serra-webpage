@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "Sergi Serra — IT Professional Profile",
+    "description": "Personal website of Sergi Serra. IT-focused professional profile: experience, skills and projects."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "vibe": "Vibe Coding",
+    "contact": "Contact",
+    "skipToContent": "Skip to main content",
+    "menu": "Navigation menu"
+  },
+  "theme": {
+    "toggle": "Toggle light/dark theme",
+    "light": "Light theme",
+    "dark": "Dark theme"
+  },
+  "language": {
+    "label": "Select language",
+    "ca": "Català",
+    "en": "English",
+    "es": "Español"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Sergi Serra",
+    "role": "[EDITAR] Software Engineer / Full-Stack Developer",
+    "tagline": "[EDITAR] I build robust and scalable web applications, with attention to detail, performance and user experience.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Get in touch"
+  },
+  "about": {
+    "title": "About me",
+    "paragraph1": "[EDITAR] I'm an IT professional passionate about solving complex problems through clean code and well-designed solutions. I enjoy working in teams and learning continuously.",
+    "paragraph2": "[EDITAR] I have experience developing web applications end to end, from architecture design to deployment. Add your education, years of experience and areas of specialization here.",
+    "highlightsTitle": "In a nutshell",
+    "highlights": [
+      "[EDITAR] +X years of experience in software development",
+      "[EDITAR] Specialized in web applications and APIs",
+      "[EDITAR] Focus on quality, testing and best practices"
+    ]
+  },
+  "skills": {
+    "title": "Skills & technologies",
+    "intro": "[EDITAR] These are some of the technologies and tools I work with.",
+    "categories": [
+      {
+        "name": "Languages",
+        "items": ["JavaScript", "TypeScript", "Python", "[EDITAR] Java"]
+      },
+      {
+        "name": "Frontend",
+        "items": ["Astro", "React", "HTML5", "CSS3"]
+      },
+      {
+        "name": "Backend",
+        "items": ["Node.js", "[EDITAR] FastAPI", "[EDITAR] Express", "REST APIs"]
+      },
+      {
+        "name": "Tools & DevOps",
+        "items": ["Git", "Docker", "[EDITAR] CI/CD", "[EDITAR] AWS"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "intro": "[EDITAR] A selection of projects I've worked on. Replace them with your own.",
+    "viewProject": "View project",
+    "items": [
+      {
+        "name": "[EDITAR] Project 1",
+        "description": "[EDITAR] Short description of the project, the problem it solves and your role.",
+        "tags": ["Astro", "TypeScript"],
+        "url": "#"
+      },
+      {
+        "name": "[EDITAR] Project 2",
+        "description": "[EDITAR] Short description of the project, technologies used and results.",
+        "tags": ["Node.js", "API"],
+        "url": "#"
+      },
+      {
+        "name": "[EDITAR] Project 3",
+        "description": "[EDITAR] Short description of the project and its impact.",
+        "tags": ["React", "Docker"],
+        "url": "#"
+      }
+    ]
+  },
+  "vibe": {
+    "title": "Vibe Coding",
+    "intro": "This website —and other projects on my GitHub— is developed with the help of artificial intelligence. I believe in transparency: I don't hide my use of AI, I present it as a skill I'm proficient in. The value isn't in \"generating code\", but in directing the tools with technical judgment, defining good requirements and verifying the result.",
+    "workflowTitle": "Real workflow & stack",
+    "workflowIntro": "The workflow I used to ship this very website:",
+    "steps": [
+      {
+        "name": "Prompt-driven orchestration",
+        "description": "I defined the requirements in natural language: an Astro website, multilingual (CA/EN/ES), light/dark mode, LinkedIn and GitHub links, a professional IT-focused design, accessible and responsive."
+      },
+      {
+        "name": "Specialized agents in a pipeline",
+        "description": "Kiro CLI orchestrated several AI agents in sequence: full-stack development → UI/UX design → QA. Each agent specialized in its own task."
+      },
+      {
+        "name": "Verification & human control",
+        "description": "Clean build (Astro), automated visual testing with Playwright and an accessibility review (AA contrast, semantic HTML). The final decision and validation are human."
+      }
+    ],
+    "stackTitle": "Technical stack",
+    "stack": ["Astro", "TypeScript", "Astro native i18n", "CSS (theme variables)", "Kiro CLI (AI agents)", "Playwright (QA)"],
+    "promptTitle": "The real prompt",
+    "promptIntro": "This is, in essence, the request that gave birth to the website:",
+    "promptText": "\"I want to create my personal website with Astro to gain visibility for a future job. On design, make it attractive, professional and IT-focused, pleasant to look at and easy to read. It should be available in Catalan, English and Spanish, with buttons to my LinkedIn and GitHub, and a toggle between light and dark mode.\"",
+    "howTo": "How was this made?",
+    "projectsTitle": "Other vibe-coded projects",
+    "projectsIntro": "Other projects on my GitHub built with this same approach:",
+    "projects": [
+      {
+        "name": "ProgramacioDocent",
+        "description": "[EDITAR] Short description of the project and its purpose.",
+        "url": "https://github.com/sergi-learns-devops/ProgramacioDocent"
+      },
+      {
+        "name": "kumo",
+        "description": "[EDITAR] Short description of the project and its purpose.",
+        "url": "https://github.com/sergi-learns-devops/kumo"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "[EDITAR] Looking for someone like me? I'd love to talk. You can reach me through the channels below.",
+    "emailLabel": "Email",
+    "email": "s.serramarques@gmail.com",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with Astro."
+  }
+}

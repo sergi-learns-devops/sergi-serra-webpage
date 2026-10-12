@@ -1,0 +1,22 @@
+---
+import type { UIStrings } from "../i18n/ui";
+
+interface Props {
+  t: UIStrings;
+}
+
+const { t } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container">
+    <p class="hero__greeting">{t.hero.greeting}</p>
+    <h1 class="hero__name">{t.hero.name}</h1>
+    <p class="hero__role">{t.hero.role}</p>
+    <p class="hero__tagline">{t.hero.tagline}</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#projects">{t.hero.ctaProjects}</a>
+      <a class="btn btn--secondary" href="#contact">{t.hero.ctaContact}</a>
+    </div>
+  </div>
+</section>

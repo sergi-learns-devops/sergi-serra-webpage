@@ -1,0 +1,40 @@
+---
+import type { UIStrings } from "../i18n/ui";
+
+interface Props {
+  t: UIStrings;
+}
+
+const { t } = Astro.props;
+---
+
+<section id="projects" class="section section--alt" aria-labelledby="projects-title">
+  <div class="container">
+    <h2 id="projects-title" class="section__title">{t.projects.title}</h2>
+    <p class="section__intro">{t.projects.intro}</p>
+    <div class="projects__grid">
+      {
+        t.projects.items.map((project) => (
+          <article class="project-card">
+            <h3 class="project-card__name">{project.name}</h3>
+            <p class="project-card__desc">{project.description}</p>
+            <ul class="project-card__tags">
+              {project.tags.map((tag) => (
+                <li class="tag">{tag}</li>
+              ))}
+            </ul>
+            <a
+              class="project-card__link"
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${t.projects.viewProject}: ${project.name}`}
+            >
+              {t.projects.viewProject}
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import About from "../../components/About.astro";
+import Skills from "../../components/Skills.astro";
+import Projects from "../../components/Projects.astro";
+import VibeCoding from "../../components/VibeCoding.astro";
+import Contact from "../../components/Contact.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<BaseLayout>
+  <Hero t={t} />
+  <About t={t} />
+  <Skills t={t} />
+  <Projects t={t} />
+  <VibeCoding t={t} />
+  <Contact t={t} />
+</BaseLayout>

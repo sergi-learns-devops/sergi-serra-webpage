@@ -1,0 +1,30 @@
+---
+import type { UIStrings } from "../i18n/ui";
+
+interface Props {
+  t: UIStrings;
+}
+
+const { t } = Astro.props;
+---
+
+<section id="skills" class="section" aria-labelledby="skills-title">
+  <div class="container">
+    <h2 id="skills-title" class="section__title">{t.skills.title}</h2>
+    <p class="section__intro">{t.skills.intro}</p>
+    <div class="skills__grid">
+      {
+        t.skills.categories.map((category) => (
+          <article class="skill-card">
+            <h3 class="skill-card__name">{category.name}</h3>
+            <ul class="skill-card__list">
+              {category.items.map((item) => (
+                <li class="tag">{item}</li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

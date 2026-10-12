@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "Sergi Serra — Perfil profesional TI",
+    "description": "Página personal de Sergi Serra. Perfil profesional orientado a tecnologías de la información: experiencia, habilidades y proyectos."
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "vibe": "Vibe Coding",
+    "contact": "Contacto",
+    "skipToContent": "Saltar al contenido principal",
+    "menu": "Menú de navegación"
+  },
+  "theme": {
+    "toggle": "Cambiar tema claro/oscuro",
+    "light": "Tema claro",
+    "dark": "Tema oscuro"
+  },
+  "language": {
+    "label": "Seleccionar idioma",
+    "ca": "Català",
+    "en": "English",
+    "es": "Español"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Sergi Serra",
+    "role": "[EDITAR] Ingeniero de Software / Desarrollador Full-Stack",
+    "tagline": "[EDITAR] Construyo aplicaciones web robustas y escalables, con atención al detalle, el rendimiento y la experiencia de usuario.",
+    "ctaProjects": "Ver proyectos",
+    "ctaContact": "Contacta conmigo"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "paragraph1": "[EDITAR] Soy un profesional de las tecnologías de la información con pasión por resolver problemas complejos mediante código limpio y soluciones bien diseñadas. Me gusta trabajar en equipo y aprender continuamente.",
+    "paragraph2": "[EDITAR] Tengo experiencia en el desarrollo de aplicaciones web de principio a fin, desde el diseño de la arquitectura hasta el despliegue. Añade aquí tu formación, años de experiencia y ámbitos en los que te has especializado.",
+    "highlightsTitle": "En pocas palabras",
+    "highlights": [
+      "[EDITAR] +X años de experiencia en desarrollo de software",
+      "[EDITAR] Especializado en aplicaciones web y APIs",
+      "[EDITAR] Enfoque en calidad, pruebas y buenas prácticas"
+    ]
+  },
+  "skills": {
+    "title": "Habilidades y tecnologías",
+    "intro": "[EDITAR] Estas son algunas de las tecnologías y herramientas con las que trabajo.",
+    "categories": [
+      {
+        "name": "Lenguajes",
+        "items": ["JavaScript", "TypeScript", "Python", "[EDITAR] Java"]
+      },
+      {
+        "name": "Frontend",
+        "items": ["Astro", "React", "HTML5", "CSS3"]
+      },
+      {
+        "name": "Backend",
+        "items": ["Node.js", "[EDITAR] FastAPI", "[EDITAR] Express", "REST APIs"]
+      },
+      {
+        "name": "Herramientas y DevOps",
+        "items": ["Git", "Docker", "[EDITAR] CI/CD", "[EDITAR] AWS"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "intro": "[EDITAR] Una selección de proyectos en los que he trabajado. Sustitúyelos por los tuyos.",
+    "viewProject": "Ver proyecto",
+    "items": [
+      {
+        "name": "[EDITAR] Proyecto 1",
+        "description": "[EDITAR] Descripción breve del proyecto, el problema que resuelve y tu papel.",
+        "tags": ["Astro", "TypeScript"],
+        "url": "#"
+      },
+      {
+        "name": "[EDITAR] Proyecto 2",
+        "description": "[EDITAR] Descripción breve del proyecto, las tecnologías empleadas y los resultados.",
+        "tags": ["Node.js", "API"],
+        "url": "#"
+      },
+      {
+        "name": "[EDITAR] Proyecto 3",
+        "description": "[EDITAR] Descripción breve del proyecto y de su impacto.",
+        "tags": ["React", "Docker"],
+        "url": "#"
+      }
+    ]
+  },
+  "vibe": {
+    "title": "Vibe Coding",
+    "intro": "Esta web —y otros proyectos de mi GitHub— está desarrollada con asistencia de inteligencia artificial. Creo en la transparencia: no escondo el uso de IA, sino que lo presento como una competencia que domino. El valor no está en «generar código», sino en dirigir las herramientas con criterio técnico, definir buenos requisitos y verificar el resultado.",
+    "workflowTitle": "Workflow y stack real",
+    "workflowIntro": "Flujo de trabajo que utilicé para desplegar esta misma web:",
+    "steps": [
+      {
+        "name": "Orquestación vía prompt",
+        "description": "Definí los requisitos en lenguaje natural: web con Astro, multiidioma (CA/EN/ES), modo claro/oscuro, enlaces a LinkedIn y GitHub, diseño profesional orientado a TI, accesible y responsive."
+      },
+      {
+        "name": "Agentes especializados en pipeline",
+        "description": "Kiro CLI orquestó varios agentes de IA en cadena: desarrollo full-stack → diseño UI/UX → QA. Cada agente, especializado en su tarea."
+      },
+      {
+        "name": "Verificación y control humano",
+        "description": "Build limpio (Astro), pruebas visuales automatizadas con Playwright y revisión de accesibilidad (contraste AA, HTML semántico). La decisión y la validación finales son humanas."
+      }
+    ],
+    "stackTitle": "Stack técnico",
+    "stack": ["Astro", "TypeScript", "i18n nativo de Astro", "CSS (variables de tema)", "Kiro CLI (agentes de IA)", "Playwright (QA)"],
+    "promptTitle": "El prompt real",
+    "promptIntro": "Esta es, en esencia, la petición con la que nació la web:",
+    "promptText": "«Quiero crear mi propia página web con Astro para darme visibilidad para un futuro empleo. Sobre el diseño, que se vea atractivo, profesional y orientado a TI, agradable a la vista y de fácil lectura. Que esté disponible en catalán, inglés y castellano, con botones hacia mi LinkedIn y GitHub, y que se pueda alternar entre modo claro y oscuro.»",
+    "howTo": "¿Cómo se hizo esto?",
+    "projectsTitle": "Otros proyectos vibe-codeados",
+    "projectsIntro": "Otros proyectos de mi GitHub desarrollados con este mismo enfoque:",
+    "projects": [
+      {
+        "name": "ProgramacioDocent",
+        "description": "[EDITAR] Breve descripción del proyecto y de su propósito.",
+        "url": "https://github.com/sergi-learns-devops/ProgramacioDocent"
+      },
+      {
+        "name": "kumo",
+        "description": "[EDITAR] Breve descripción del proyecto y de su propósito.",
+        "url": "https://github.com/sergi-learns-devops/kumo"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "intro": "[EDITAR] ¿Buscas a alguien como yo? Me encantará hablar contigo. Puedes contactarme por los siguientes canales.",
+    "emailLabel": "Correo electrónico",
+    "email": "s.serramarques@gmail.com",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "builtWith": "Hecho con Astro."
+  }
+}
