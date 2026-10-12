@@ -52,7 +52,7 @@
       },
       {
         "name": "Eines & DevOps",
-        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions"]
+        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA"]
       }
     ]
   },

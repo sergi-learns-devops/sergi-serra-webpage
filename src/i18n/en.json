@@ -26,7 +26,7 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Sergi Serra",
-    "role": "Cloud Engineer",
+    "role": "Cloud Engineer & Architect",
     "tagline": "[EDITAR] I build robust and scalable web applications, with attention to detail, performance and user experience.",
     "ctaProjects": "View projects",
     "ctaContact": "Get in touch"
@@ -52,7 +52,7 @@
       },
       {
         "name": "Tools & DevOps",
-        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions"]
+        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "AI"]
       }
     ]
   },

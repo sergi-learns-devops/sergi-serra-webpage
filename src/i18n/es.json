@@ -26,7 +26,7 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Sergi Serra",
-    "role": "Cloud Engineer",
+    "role": "Cloud Engineer & Architect",
     "tagline": "[EDITAR] Construyo aplicaciones web robustas y escalables, con atención al detalle, el rendimiento y la experiencia de usuario.",
     "ctaProjects": "Ver proyectos",
     "ctaContact": "Contacta conmigo"
@@ -38,8 +38,8 @@
     "highlightsTitle": "En pocas palabras",
     "highlights": [
       "+4 años de experiencia en Google Cloud Platform",
-      "[EDITAR] Especializado en migraciones de workloads a cloud",
-      "[EDITAR] Enfoque en seguir buenas prácticas de seguridad"
+      "Especializado en migraciones de workloads a cloud",
+      "Enfoque en seguir buenas prácticas de seguridad"
     ]
   },
   "skills": {
@@ -52,7 +52,7 @@
       },
       {
         "name": "Herramientas y DevOps",
-        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions"]
+        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA"]
       }
     ]
   },
