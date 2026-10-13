@@ -600,6 +600,27 @@ ul {
   gap: var(--space-md);
 }
 
+.hero__cv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm, 0.75rem);
+  margin-top: var(--space-md);
+}
+
+.btn--cv {
+  background-color: transparent;
+  color: var(--color-text-muted);
+  border: 1px dashed var(--color-border-strong);
+  padding: 0.6rem 1.1rem;
+  font-size: 0.9rem;
+}
+
+.btn--cv:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  border-style: solid;
+}
+
 /* ============================================================
    About
    ============================================================ */

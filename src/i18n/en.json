@@ -30,7 +30,9 @@
     "role": "Cloud Engineer & Architect",
     "tagline": "I build robust and scalable cloud solutions, with attention to security using Google Cloud",
     "ctaProjects": "View projects",
-    "ctaContact": "Get in touch"
+    "ctaContact": "Get in touch",
+    "cvEs": "CV (Spanish)",
+    "cvEn": "CV (English)"
   },
   "about": {
     "title": "About me",

@@ -28,9 +28,11 @@
     "greeting": "Hola, soc",
     "name": "Sergi Serra",
     "role": "Cloud Engineer & Architect",
-    "tagline": "Dissenyo i implemento solucions cloud robustes i escalables, amb atenció per la segureta utilitzant el núvol de Google Cloud",
+    "tagline": "Dissenyo i implemento solucions cloud robustes i escalables, amb atenció per la seguretat utilitzant el núvol de Google Cloud",
     "ctaProjects": "Veure projectes",
-    "ctaContact": "Contacta amb mi"
+    "ctaContact": "Contacta amb mi",
+    "cvEs": "CV (Castellà)",
+    "cvEn": "CV (Anglès)"
   },
   "about": {
     "title": "Sobre mi",

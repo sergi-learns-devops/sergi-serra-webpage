@@ -9,4 +9,8 @@ export const siteConfig = {
   email: 's.serramarques@gmail.com',
   // [EDITAR] Pega aquí la URL pública de tu perfil de Credly.
   credly: 'https://www.credly.com/users/sergi-serra/badges/credly',
+  cv: {
+    es: '/cv/CV-Sergi-Serra-ES.pdf',
+    en: '/cv/CV-Sergi-Serra-EN.pdf',
+  },
 } as const;
