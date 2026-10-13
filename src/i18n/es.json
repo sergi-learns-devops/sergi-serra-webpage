@@ -6,6 +6,7 @@
   "nav": {
     "about": "Sobre mí",
     "skills": "Habilidades",
+    "certs": "Certificaciones",
     "projects": "Proyectos",
     "vibe": "Vibe Coding",
     "contact": "Contacto",
@@ -58,6 +59,25 @@
         "name": "SO",
         "items": ["Linux", "Windows"]
       }
+    ],
+    "learningTitle": "Aprendiendo y explorando",
+    "learning": ["[EDITAR] AWS", "[EDITAR] Ansible", "[EDITAR] Python", "[EDITAR] Prometheus & Grafana"]
+  },
+  "certs": {
+    "title": "Certificaciones",
+    "intro": "Certificaciones oficiales de Google Cloud. Todas verificables en mi perfil público de Credly.",
+    "verifyAll": "Ver todas en Credly",
+    "levelAssociate": "Associate",
+    "levelProfessional": "Professional",
+    "issuer": "Google Cloud",
+    "items": [
+      { "name": "Associate Cloud Engineer", "level": "Associate" },
+      { "name": "Professional Cloud Architect", "level": "Professional" },
+      { "name": "Professional Cloud Network Engineer", "level": "Professional" },
+      { "name": "Professional Cloud DevOps Engineer", "level": "Professional" },
+      { "name": "Professional Cloud Security Engineer", "level": "Professional" },
+      { "name": "Professional Cloud Developer", "level": "Professional" },
+      { "name": "Professional Cloud Database Engineer", "level": "Professional" }
     ]
   },
   "projects": {
@@ -90,16 +110,21 @@
     "intro": "Esta web —y otros proyectos de mi GitHub— está desarrollada con asistencia de inteligencia artificial. Creo en la transparencia: no escondo el uso de IA, sino que lo presento como una competencia que domino. El valor no está en «generar código», sino en dirigir las herramientas con criterio técnico, definir buenos requisitos y verificar el resultado.",
     "workflowTitle": "Workflow y stack real",
     "workflowIntro": "Flujo de trabajo que utilicé para desplegar esta misma web:",
+    "diagramStart": "Prompt",
+    "diagramEnd": "Despliegue",
     "steps": [
       {
+        "agent": "fullstack-developer",
         "name": "Orquestación vía prompt",
         "description": "Definí los requisitos en lenguaje natural: web con Astro, multiidioma (CA/EN/ES), modo claro/oscuro, enlaces a LinkedIn y GitHub, diseño profesional orientado a TI, accesible y responsive."
       },
       {
+        "agent": "ui-designer",
         "name": "Agentes especializados en pipeline",
         "description": "Kiro CLI orquestó varios agentes de IA en cadena: desarrollo full-stack → diseño UI/UX → QA. Cada agente, especializado en su tarea."
       },
       {
+        "agent": "qa-agent",
         "name": "Verificación y control humano",
         "description": "Build limpio (Astro), pruebas visuales automatizadas con Playwright y revisión de accesibilidad (contraste AA, HTML semántico). La decisión y la validación finales son humanas."
       }

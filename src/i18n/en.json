@@ -6,6 +6,7 @@
   "nav": {
     "about": "About",
     "skills": "Skills",
+    "certs": "Certifications",
     "projects": "Projects",
     "vibe": "Vibe Coding",
     "contact": "Contact",
@@ -58,6 +59,25 @@
         "name": "OS",
         "items": ["Linux", "Windows"]
       }
+    ],
+    "learningTitle": "Learning & exploring",
+    "learning": ["[EDITAR] AWS", "[EDITAR] Ansible", "[EDITAR] Python", "[EDITAR] Prometheus & Grafana"]
+  },
+  "certs": {
+    "title": "Certifications",
+    "intro": "Official Google Cloud certifications. All verifiable on my public Credly profile.",
+    "verifyAll": "View all on Credly",
+    "levelAssociate": "Associate",
+    "levelProfessional": "Professional",
+    "issuer": "Google Cloud",
+    "items": [
+      { "name": "Associate Cloud Engineer", "level": "Associate" },
+      { "name": "Professional Cloud Architect", "level": "Professional" },
+      { "name": "Professional Cloud Network Engineer", "level": "Professional" },
+      { "name": "Professional Cloud DevOps Engineer", "level": "Professional" },
+      { "name": "Professional Cloud Security Engineer", "level": "Professional" },
+      { "name": "Professional Cloud Developer", "level": "Professional" },
+      { "name": "Professional Cloud Database Engineer", "level": "Professional" }
     ]
   },
   "projects": {
@@ -90,16 +110,21 @@
     "intro": "This website —and other projects on my GitHub— is developed with the help of artificial intelligence. I believe in transparency: I don't hide my use of AI, I present it as a skill I'm proficient in. The value isn't in \"generating code\", but in directing the tools with technical judgment, defining good requirements and verifying the result.",
     "workflowTitle": "Real workflow & stack",
     "workflowIntro": "The workflow I used to ship this very website:",
+    "diagramStart": "Prompt",
+    "diagramEnd": "Deployment",
     "steps": [
       {
+        "agent": "fullstack-developer",
         "name": "Prompt-driven orchestration",
         "description": "I defined the requirements in natural language: an Astro website, multilingual (CA/EN/ES), light/dark mode, LinkedIn and GitHub links, a professional IT-focused design, accessible and responsive."
       },
       {
+        "agent": "ui-designer",
         "name": "Specialized agents in a pipeline",
         "description": "Kiro CLI orchestrated several AI agents in sequence: full-stack development → UI/UX design → QA. Each agent specialized in its own task."
       },
       {
+        "agent": "qa-agent",
         "name": "Verification & human control",
         "description": "Clean build (Astro), automated visual testing with Playwright and an accessibility review (AA contrast, semantic HTML). The final decision and validation are human."
       }

@@ -26,5 +26,12 @@ const { t } = Astro.props;
         ))
       }
     </div>
+
+    <div class="skills__learning">
+      <h3 class="skills__learning-title">{t.skills.learningTitle}</h3>
+      <ul class="skills__learning-list">
+        {t.skills.learning.map((item) => <li class="tag tag--outline">{item}</li>)}
+      </ul>
+    </div>
   </div>
 </section>

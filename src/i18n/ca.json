@@ -6,6 +6,7 @@
   "nav": {
     "about": "Sobre mi",
     "skills": "Habilitats",
+    "certs": "Certificacions",
     "projects": "Projectes",
     "vibe": "Vibe Coding",
     "contact": "Contacte",
@@ -58,6 +59,25 @@
         "name": "SO",
         "items": ["Linux", "Windows"]
       }
+    ],
+    "learningTitle": "Aprenent i explorant",
+    "learning": ["[EDITAR] AWS", "[EDITAR] Ansible", "[EDITAR] Python", "[EDITAR] Prometheus & Grafana"]
+  },
+  "certs": {
+    "title": "Certificacions",
+    "intro": "Certificacions oficials de Google Cloud. Totes verificables al meu perfil públic de Credly.",
+    "verifyAll": "Veure totes a Credly",
+    "levelAssociate": "Associate",
+    "levelProfessional": "Professional",
+    "issuer": "Google Cloud",
+    "items": [
+      { "name": "Associate Cloud Engineer", "level": "Associate" },
+      { "name": "Professional Cloud Architect", "level": "Professional" },
+      { "name": "Professional Cloud Network Engineer", "level": "Professional" },
+      { "name": "Professional Cloud DevOps Engineer", "level": "Professional" },
+      { "name": "Professional Cloud Security Engineer", "level": "Professional" },
+      { "name": "Professional Cloud Developer", "level": "Professional" },
+      { "name": "Professional Cloud Database Engineer", "level": "Professional" }
     ]
   },
   "projects": {
@@ -90,16 +110,21 @@
     "intro": "Aquesta web —i altres projectes del meu GitHub— està desenvolupada amb assistència d'intel·ligència artificial. Crec en la transparència: no amago l'ús d'IA, sinó que el presento com una competència que domino. El valor no és «generar codi», sinó dirigir les eines amb criteri tècnic, definir bons requisits i verificar el resultat.",
     "workflowTitle": "Workflow i stack real",
     "workflowIntro": "Flux de treball que vaig fer servir per desplegar aquesta mateixa web:",
+    "diagramStart": "Prompt",
+    "diagramEnd": "Desplegament",
     "steps": [
       {
+        "agent": "fullstack-developer",
         "name": "Orquestració via prompt",
         "description": "Vaig definir els requisits en llenguatge natural: web amb Astro, multiidioma (CA/EN/ES), mode clar/fosc, enllaços a LinkedIn i GitHub, disseny professional orientat a TI, accessible i responsive."
       },
       {
+        "agent": "ui-designer",
         "name": "Agents especialitzats en pipeline",
         "description": "Kiro CLI va orquestrar diversos agents d'IA en cadena: desenvolupament full-stack → disseny UI/UX → QA. Cada agent, especialitzat en la seva tasca."
       },
       {
+        "agent": "qa-agent",
         "name": "Verificació i control humà",
         "description": "Build net (Astro), proves visuals automatitzades amb Playwright i revisió d'accessibilitat (contrast AA, HTML semàntic). La decisió i la validació finals són humanes."
       }
