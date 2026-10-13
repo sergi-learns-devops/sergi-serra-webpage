@@ -27,7 +27,7 @@
   "hero": {
     "greeting": "Hola, soc",
     "name": "Sergi Serra",
-    "role": "Cloud Engineer",
+    "role": "Cloud Engineer & Architect",
     "tagline": "Dissenyo i implemento solucions cloud robustes i escalables, amb atenció per la segureta utilitzant el núvol de Google Cloud",
     "ctaProjects": "Veure projectes",
     "ctaContact": "Contacta amb mi"
@@ -38,6 +38,7 @@
     "paragraph2": "[EDITAR] Tinc experiència en el desenvolupament d'aplicacions web de principi a fi, des del disseny de l'arquitectura fins al desplegament. Afegeix aquí la teva formació, anys d'experiència i àmbits en què t'has especialitzat.",
     "highlightsTitle": "En poques paraules",
     "highlights": [
+      "Especialista en infrastructura cloud",
       "+4 anys d'experiència amb Google Cloud Platform",
       "Especialitzat en migracions de workloads a cloud",
       "Enfocament en seguir bones pràctiques de seguretat"
@@ -49,7 +50,7 @@
     "categories": [
       {
         "name": "Platarformes Cloud",
-        "items": ["Google Cloud Platform", "Starting in AWS"]
+        "items": ["Google Cloud Platform"]
       },
       {
         "name": "Eines & DevOps",
@@ -60,8 +61,8 @@
         "items": ["Linux", "Windows"]
       }
     ],
-    "learningTitle": "Aprenent i explorant",
-    "learning": ["[EDITAR] AWS", "[EDITAR] Ansible", "[EDITAR] Python", "[EDITAR] Prometheus & Grafana"]
+    "learningTitle": "Aprenent i interessat en...",
+    "learning": ["AWS (Starting)", "Ansible", "Argo CD", "Prometheus & Grafana", "Azure"]
   },
   "certs": {
     "title": "Certificacions",

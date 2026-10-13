@@ -38,6 +38,7 @@
     "paragraph2": "[EDITAR] Tengo experiencia en el desarrollo de aplicaciones web de principio a fin, desde el diseño de la arquitectura hasta el despliegue. Añade aquí tu formación, años de experiencia y ámbitos en los que te has especializado.",
     "highlightsTitle": "En pocas palabras",
     "highlights": [
+      "Especialista en infraestructura cloud",
       "+4 años de experiencia en Google Cloud Platform",
       "Especializado en migraciones de workloads a cloud",
       "Enfoque en seguir buenas prácticas de seguridad"
@@ -60,8 +61,8 @@
         "items": ["Linux", "Windows"]
       }
     ],
-    "learningTitle": "Aprendiendo y explorando",
-    "learning": ["[EDITAR] AWS", "[EDITAR] Ansible", "[EDITAR] Python", "[EDITAR] Prometheus & Grafana"]
+    "learningTitle": "Aprendiendo e interesado en...",
+    "learning": ["AWS (Starting)", "Ansible", "Argo CD", "Prometheus & Grafana", "Azure"]
   },
   "certs": {
     "title": "Certificaciones",

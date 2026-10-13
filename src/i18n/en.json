@@ -38,6 +38,7 @@
     "paragraph2": "[EDITAR] I have experience developing web applications end to end, from architecture design to deployment. Add your education, years of experience and areas of specialization here.",
     "highlightsTitle": "In a nutshell",
     "highlights": [
+      "Specialist in cloud infrastructure",
       "+4 years of experience in Google Cloud Platform",
       "Specialized in migrating workloads to the cloud",
       "Focus on applying best practices in security"
@@ -60,8 +61,8 @@
         "items": ["Linux", "Windows"]
       }
     ],
-    "learningTitle": "Learning & exploring",
-    "learning": ["[EDITAR] AWS", "[EDITAR] Ansible", "[EDITAR] Python", "[EDITAR] Prometheus & Grafana"]
+    "learningTitle": "Learning & interested in...",
+    "learning": ["AWS (Starting)", "Ansible", "Argo CD", "Prometheus & Grafana", "Azure"]
   },
   "certs": {
     "title": "Certifications",
