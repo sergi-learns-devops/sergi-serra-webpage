@@ -27,7 +27,7 @@
     "greeting": "Hi, I'm",
     "name": "Sergi Serra",
     "role": "Cloud Engineer & Architect",
-    "tagline": "[EDITAR] I build robust and scalable web applications, with attention to detail, performance and user experience.",
+    "tagline": "I build robust and scalable cloud solutions, with attention to security using Google Cloud",
     "ctaProjects": "View projects",
     "ctaContact": "Get in touch"
   },
@@ -53,6 +53,10 @@
       {
         "name": "Tools & DevOps",
         "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "AI"]
+      },
+      {
+        "name": "OS",
+        "items": ["Linux", "Windows"]
       }
     ]
   },
@@ -111,19 +115,19 @@
     "projects": [
       {
         "name": "ProgramacioDocent",
-        "description": "[EDITAR] Short description of the project and its purpose.",
+        "description": "A portable application for teachers. Allows organizing and managing teaching programming in a simple and efficient way.",
         "url": "https://github.com/sergi-learns-devops/ProgramacioDocent"
       },
       {
         "name": "kumo",
-        "description": "[EDITAR] Short description of the project and its purpose.",
+        "description": "CLI tool for making decisions about cloud resources (computing).",
         "url": "https://github.com/sergi-learns-devops/kumo"
       }
     ]
   },
   "contact": {
     "title": "Contact",
-    "intro": "[EDITAR] Looking for someone like me? I'd love to talk. You can reach me through the channels below.",
+    "intro": "Looking for someone like me? I'd love to talk. You can reach me through the channels below.",
     "emailLabel": "Email",
     "email": "s.serramarques@gmail.com",
     "linkedinLabel": "LinkedIn",

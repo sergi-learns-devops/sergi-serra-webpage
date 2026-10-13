@@ -27,7 +27,7 @@
     "greeting": "Hola, soy",
     "name": "Sergi Serra",
     "role": "Cloud Engineer & Architect",
-    "tagline": "[EDITAR] Construyo aplicaciones web robustas y escalables, con atención al detalle, el rendimiento y la experiencia de usuario.",
+    "tagline": "Diseño e implemento soluciones cloud robustas y escalables, con atención a la seguridad usando la nube de Google Cloud",
     "ctaProjects": "Ver proyectos",
     "ctaContact": "Contacta conmigo"
   },
@@ -53,6 +53,10 @@
       {
         "name": "Herramientas y DevOps",
         "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA"]
+      },
+      {
+        "name": "SO",
+        "items": ["Linux", "Windows"]
       }
     ]
   },
@@ -111,19 +115,19 @@
     "projects": [
       {
         "name": "ProgramacioDocent",
-        "description": "[EDITAR] Breve descripción del proyecto y de su propósito.",
+        "description": "Aplicación portable para docentes. Permite organizar y gestionar la programación docente de manera sencilla y eficaz.",
         "url": "https://github.com/sergi-learns-devops/ProgramacioDocent"
       },
       {
         "name": "kumo",
-        "description": "[EDITAR] Breve descripción del proyecto y de su propósito.",
+        "description": "Herramienta CLI para la toma de decisiones sobre recursos en la nube (computación).",
         "url": "https://github.com/sergi-learns-devops/kumo"
       }
     ]
   },
   "contact": {
     "title": "Contacto",
-    "intro": "[EDITAR] ¿Buscas a alguien como yo? Me encantará hablar contigo. Puedes contactarme por los siguientes canales.",
+    "intro": "¿Buscas a alguien como yo? Me encantará hablar contigo. Puedes contactarme por los siguientes canales.",
     "emailLabel": "Correo electrónico",
     "email": "s.serramarques@gmail.com",
     "linkedinLabel": "LinkedIn",

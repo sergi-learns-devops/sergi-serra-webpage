@@ -27,7 +27,7 @@
     "greeting": "Hola, soc",
     "name": "Sergi Serra",
     "role": "Cloud Engineer",
-    "tagline": "[EDITAR] Construeixo aplicacions web robustes i escalables, amb cura pel detall, el rendiment i l'experiència d'usuari.",
+    "tagline": "Dissenyo i implemento solucions cloud robustes i escalables, amb atenció per la segureta utilitzant el núvol de Google Cloud",
     "ctaProjects": "Veure projectes",
     "ctaContact": "Contacta amb mi"
   },
@@ -53,6 +53,10 @@
       {
         "name": "Eines & DevOps",
         "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA"]
+      },
+      {
+        "name": "SO",
+        "items": ["Linux", "Windows"]
       }
     ]
   },
@@ -111,19 +115,19 @@
     "projects": [
       {
         "name": "ProgramacioDocent",
-        "description": "[EDITAR] Breu descripció del projecte i del seu propòsit.",
+        "description": "Aplicació portable per a docents. Permet organitzar i gestionar la programació docent de manera senzilla i eficaç.",
         "url": "https://github.com/sergi-learns-devops/ProgramacioDocent"
       },
       {
         "name": "kumo",
-        "description": "[EDITAR] Breu descripció del projecte i del seu propòsit.",
+        "description": "Eina CLI per a la decisió de recursos cloud (computació).",
         "url": "https://github.com/sergi-learns-devops/kumo"
       }
     ]
   },
   "contact": {
     "title": "Contacte",
-    "intro": "[EDITAR] Estàs buscant algú com jo? M'encantarà parlar amb tu. Pots contactar-me pels següents canals.",
+    "intro": "Estàs buscant algú com jo? M'encantarà parlar amb tu. Pots contactar-me pels següents canals.",
     "emailLabel": "Correu electrònic",
     "email": "s.serramarques@gmail.com",
     "linkedinLabel": "LinkedIn",
