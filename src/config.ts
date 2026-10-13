@@ -8,5 +8,5 @@ export const siteConfig = {
   repo: 'https://github.com/sergi-learns-devops/sergi-serra-webpage',
   email: 's.serramarques@gmail.com',
   // [EDITAR] Pega aquí la URL pública de tu perfil de Credly.
-  credly: 'https://www.credly.com/users/sergi-serra',
+  credly: 'https://www.credly.com/users/sergi-serra/badges/credly',
 } as const;
