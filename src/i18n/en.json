@@ -72,13 +72,13 @@
     "levelProfessional": "Professional",
     "issuer": "Google Cloud",
     "items": [
-      { "name": "Associate Cloud Engineer", "level": "Associate" },
-      { "name": "Professional Cloud Architect", "level": "Professional" },
-      { "name": "Professional Cloud Network Engineer", "level": "Professional" },
-      { "name": "Professional Cloud DevOps Engineer", "level": "Professional" },
-      { "name": "Professional Cloud Security Engineer", "level": "Professional" },
-      { "name": "Professional Cloud Developer", "level": "Professional" },
-      { "name": "Professional Cloud Database Engineer", "level": "Professional" }
+      { "name": "Associate Cloud Engineer", "level": "Associate", "image": "/badges/associate_cloud_enginner.png" },
+      { "name": "Professional Cloud Architect", "level": "Professional", "image": "/badges/professional_cloud_architect.png" },
+      { "name": "Professional Cloud Network Engineer", "level": "Professional", "image": "/badges/professional_network_engineer.png" },
+      { "name": "Professional Cloud DevOps Engineer", "level": "Professional", "image": "/badges/professional_devops_engineer.png" },
+      { "name": "Professional Cloud Security Engineer", "level": "Professional", "image": "/badges/professional_security_engineer.png" },
+      { "name": "Professional Cloud Developer", "level": "Professional", "image": "/badges/professional_cloud_developer.png" },
+      { "name": "Professional Cloud Database Engineer", "level": "Professional", "image": "/badges/professional_database_engineer.png" }
     ]
   },
   "projects": {
