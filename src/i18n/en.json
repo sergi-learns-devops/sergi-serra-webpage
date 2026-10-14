@@ -94,7 +94,7 @@
       {
         "name": "Migration of workloads to Google Cloud Platform",
         "description": "VM migrations to Google Cloud Platform. Implement security measures and best practices. Migrations completed with 100% success.",
-        "tags": ["Migrate to Virtual Machines"]
+        "tags": ["GCP", "Migrate to Virtual Machines"]
       },
       {
         "name": "Design and implementation of Landing Zones",

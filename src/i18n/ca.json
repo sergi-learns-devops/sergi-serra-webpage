@@ -94,7 +94,7 @@
       {
         "name": "Migració de workloads a Google Cloud Platform",
         "description": "Migracions de VM a Google Cloud Platform. Implementar mesusres de seguretat i bones pràctiques. Migracions realitzades amb 100% d'èxit.",
-        "tags": ["Migrate to Virtual Machines"]
+        "tags": ["GCP", "Migrate to Virtual Machines"]
       },
       {
         "name": "Disseny i implementació de Landing Zones",
