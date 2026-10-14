@@ -52,11 +52,11 @@
     "categories": [
       {
         "name": "Plataformas Cloud",
-        "items": ["Google Cloud Platform", "Starting in AWS"]
+        "items": ["Google Cloud Platform", "AWS (Starting)"]
       },
       {
         "name": "Herramientas y DevOps",
-        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA", "Bash Scripting"]
+        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA", "Bash Scripting", "Artifact Registry"]
       },
       {
         "name": "SO",
@@ -88,8 +88,7 @@
   },
   "projects": {
     "title": "Proyectos",
-    "intro": "Una selección de proyectos en los que he trabajado i liderado:",
-    "viewProject": "Ver proyecto",
+    "intro": "Una selección de proyectos en los que he trabajado y liderado:",
     "items": [
       {
         "name": "Migración de workloads a Google Cloud Platform",
@@ -97,19 +96,24 @@
         "tags": ["GCP", "Migrate to Virtual Machines"]
       },
       {
-        "name": "Ingenieria inversa con Terraform",
-        "description": "Ingenieria inversa de recursos existentes en GCP con Terraform. Extracción de la configuración y generación de archivos Terraform para la gestión de infraestructura como código. Posteriormente, desarrollar una herramienta con IA para simplificar el proceso tanto para GCP como para AWS.",
+        "name": "Ingeniería inversa con Terraform",
+        "description": "Ingeniería inversa de recursos existentes en GCP con Terraform. Extracción de la configuración y generación de archivos Terraform para la gestión de infraestructura como código. Posteriormente, desarrollar una herramienta con IA para simplificar el proceso tanto para GCP como para AWS.",
         "tags": ["GCP", "AWS", "Terraform", "Bash Scripting", "IA"]
       },
       {
         "name": "Diseño e implementación de Landing Zones",
-        "description": "Diseño e implementación de Landing Zones a GCP. Diseño y configuración de redes, interconexión con on-premises, gestión de identidades y accesos, y buenas prácticas de seguridad.",
+        "description": "Diseño e implementación de Landing Zones en GCP. Diseño y configuración de redes, interconexión con on-premises, gestión de identidades y accesos, y buenas prácticas de seguridad.",
         "tags": ["GCP", "Network", "Security", "IAM", "Terraform"]
       },
       {
         "name": "Assessment de seguridad y buenas prácticas en plataforma cloud",
-        "description": "Assessment de seguridad y buenas prácticas a GCP. Revisión de configuraciones y aplicar las medidas correctivas correspondientes.",
+        "description": "Assessment de seguridad y buenas prácticas en GCP. Revisión de configuraciones y aplicar las medidas correctivas correspondientes.",
         "tags": ["GCP", "Security", "IAM"]
+      },
+      {
+        "name": "Despliegue de appliances de seguridad en GCP",
+        "description": "Despliegue de appliances de seguridad de Fortinet y Palo Alto en GCP. Configuración de redes, reglas de firewall e integración con la infraestructura existente.",
+        "tags": ["GCP", "Security", "Fortinet", "Palo Alto", "Network"]
       }
     ]
   },

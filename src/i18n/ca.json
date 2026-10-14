@@ -51,12 +51,12 @@
     "intro": "Aquestes són algunes de les tecnologies i eines amb què treballo.",
     "categories": [
       {
-        "name": "Platarformes Cloud",
-        "items": ["Google Cloud Platform"]
+        "name": "Plataformes Cloud",
+        "items": ["Google Cloud Platform", "AWS (Starting)"]
       },
       {
         "name": "Eines & DevOps",
-        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA", "Bash Scripting"]
+        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA", "Bash Scripting", "Artifact Registry"]
       },
       {
         "name": "SO",
@@ -88,12 +88,11 @@
   },
   "projects": {
     "title": "Projectes",
-    "intro": "Una selecció de projectes en els què he treballat i lidera:",
-    "viewProject": "Veure projecte",
+    "intro": "Una selecció de projectes en els què he treballat i liderat:",
     "items": [
       {
         "name": "Migració de workloads a Google Cloud Platform",
-        "description": "Migracions de VM a Google Cloud Platform. Implementar mesusres de seguretat i bones pràctiques. Migracions realitzades amb 100% d'èxit.",
+        "description": "Migracions de VM a Google Cloud Platform. Implementar mesures de seguretat i bones pràctiques. Migracions realitzades amb 100% d'èxit.",
         "tags": ["GCP", "Migrate to Virtual Machines"]
       },
       {
@@ -108,8 +107,13 @@
       },
       {
         "name": "Assessment de seguretat i bones pràctiques en plataforma cloud",
-        "description": "Assessment de seguretat i bones pràctiques a GCP. Revisió de configuracions i aplicar les mesures correctives corresponentes.",
+        "description": "Assessment de seguretat i bones pràctiques a GCP. Revisió de configuracions i aplicar les mesures correctives corresponents.",
         "tags": ["GCP", "Security", "IAM", "Cloud Armor", "Security Command Center (SCC)", "Security Vulnerability Scanner (SCCVS)"]
+      },
+      {
+        "name": "Desplegament de appliances de seguretat a GCP",
+        "description": "Desplegament d'appliances de seguretat de Fortinet i Palo Alto a GCP. Configuració de xarxes, regles de tallafocs i integració amb la infraestructura existent.",
+        "tags": ["GCP", "Security", "Fortinet", "Palo Alto", "Network"]
       }
     ]
   },
