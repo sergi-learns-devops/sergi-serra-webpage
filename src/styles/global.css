@@ -1465,6 +1465,11 @@ ul {
   max-width: 11rem;
 }
 
+.cert-badge__media {
+  position: relative;
+  display: inline-flex;
+}
+
 .cert-badge__img {
   width: 8.5rem;
   height: 8.5rem;
@@ -1483,6 +1488,55 @@ ul {
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.35;
+}
+
+/* Marcas (renovada / caducada) */
+.cert-badge__mark {
+  position: absolute;
+  bottom: 0.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
+}
+
+.cert-badge__mark--renewed {
+  color: #0b5d1e;
+  background: #d6f5df;
+  border: 1px solid #a7e6b8;
+}
+
+:root[data-theme="dark"] .cert-badge__mark--renewed {
+  color: #7ee29a;
+  background: color-mix(in srgb, #1a7a35 35%, var(--color-surface));
+  border-color: color-mix(in srgb, #7ee29a 40%, transparent);
+}
+
+.cert-badge__mark--expired {
+  color: #8a5300;
+  background: #ffe8c2;
+  border: 1px solid #f0cf94;
+}
+
+:root[data-theme="dark"] .cert-badge__mark--expired {
+  color: #e6b35c;
+  background: color-mix(in srgb, #7a5313 35%, var(--color-surface));
+  border-color: color-mix(in srgb, #e6b35c 40%, transparent);
+}
+
+/* Estado caducado: atenúa el badge */
+.cert-badge--expired .cert-badge__img {
+  opacity: 0.55;
+  filter: grayscale(0.5) drop-shadow(0 6px 16px rgba(0, 0, 0, 0.18));
+}
+
+.cert-badge--expired:hover .cert-badge__img {
+  opacity: 0.8;
 }
 
 .certs__cta {

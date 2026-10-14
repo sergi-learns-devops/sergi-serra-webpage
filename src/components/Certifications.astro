@@ -17,16 +17,28 @@ const { t } = Astro.props;
     <ul class="certs__badges">
       {
         t.certs.items.map((cert) => (
-          <li class="cert-badge">
-            <img
-              class="cert-badge__img"
-              src={cert.image}
-              alt={`${cert.name} — ${t.certs.issuer}`}
-              width="140"
-              height="140"
-              loading="lazy"
-              decoding="async"
-            />
+          <li class={`cert-badge${cert.status === "expired" ? " cert-badge--expired" : ""}`}>
+            <div class="cert-badge__media">
+              <img
+                class="cert-badge__img"
+                src={cert.image}
+                alt={`${cert.name} — ${cert.issuer ?? t.certs.issuer}`}
+                width="140"
+                height="140"
+                loading="lazy"
+                decoding="async"
+              />
+              {cert.renewed && (
+                <span class="cert-badge__mark cert-badge__mark--renewed">
+                  {t.certs.renewedLabel} {cert.renewed}
+                </span>
+              )}
+              {cert.status === "expired" && (
+                <span class="cert-badge__mark cert-badge__mark--expired">
+                  {t.certs.expiredLabel}
+                </span>
+              )}
+            </div>
             <span class="cert-badge__name">{cert.name}</span>
           </li>
         ))

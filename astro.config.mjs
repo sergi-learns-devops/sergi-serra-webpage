@@ -6,7 +6,7 @@ export default defineConfig({
   site: 'https://sserra.dev',
   i18n: {
     locales: ['ca', 'en', 'es'],
-    defaultLocale: 'ca',
+    defaultLocale: 'es',
     routing: {
       prefixDefaultLocale: false,
     },
