@@ -56,7 +56,7 @@
       },
       {
         "name": "Herramientas y DevOps",
-        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA"]
+        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA", "Bash Scripting"]
       },
       {
         "name": "SO",
@@ -88,26 +88,23 @@
   },
   "projects": {
     "title": "Proyectos",
-    "intro": "[EDITAR] Una selección de proyectos en los que he trabajado. Sustitúyelos por los tuyos.",
+    "intro": "Una selección de proyectos en los que he trabajado i liderado:",
     "viewProject": "Ver proyecto",
     "items": [
       {
-        "name": "[EDITAR] Proyecto 1",
-        "description": "[EDITAR] Descripción breve del proyecto, el problema que resuelve y tu papel.",
-        "tags": ["Astro", "TypeScript"],
-        "url": "#"
+        "name": "Migración de workloads a Google Cloud Platform",
+        "description": "Migraciones de VM a Google Cloud Platform. Implementar medidas de seguridad y buenas prácticas. Migraciones realizadas con 100% de éxito.",
+        "tags": ["Migrate to Virtual Machines"]
       },
       {
-        "name": "[EDITAR] Proyecto 2",
-        "description": "[EDITAR] Descripción breve del proyecto, las tecnologías empleadas y los resultados.",
-        "tags": ["Node.js", "API"],
-        "url": "#"
+        "name": "Diseño e implementación de Landing Zones",
+        "description": "Diseño e implementación de Landing Zones a GCP. Diseño y configuración de redes, interconexión con on-premises, gestión de identidades y accesos, y buenas prácticas de seguridad.",
+        "tags": ["GCP", "Network", "Security", "IAM"]
       },
       {
-        "name": "[EDITAR] Proyecto 3",
-        "description": "[EDITAR] Descripción breve del proyecto y de su impacto.",
-        "tags": ["React", "Docker"],
-        "url": "#"
+        "name": "Assessment de seguridad y buenas prácticas en plataforma cloud",
+        "description": "Assessment de seguridad y buenas prácticas a GCP. Revisión de configuraciones y aplicar las medidas correctivas correspondientes.",
+        "tags": ["GCP", "Security", "IAM"]
       }
     ]
   },

@@ -56,7 +56,7 @@
       },
       {
         "name": "Eines & DevOps",
-        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA"]
+        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA", "Bash Scripting"]
       },
       {
         "name": "SO",
@@ -88,26 +88,23 @@
   },
   "projects": {
     "title": "Projectes",
-    "intro": "[EDITAR] Una selecció de projectes en què he treballat. Substitueix-los pels teus.",
+    "intro": "Una selecció de projectes en els què he treballat i lidera:",
     "viewProject": "Veure projecte",
     "items": [
       {
-        "name": "[EDITAR] Projecte 1",
-        "description": "[EDITAR] Descripció breu del projecte, el problema que resol i el teu paper.",
-        "tags": ["Astro", "TypeScript"],
-        "url": "#"
+        "name": "Migració de workloads a Google Cloud Platform",
+        "description": "Migracions de VM a Google Cloud Platform. Implementar mesusres de seguretat i bones pràctiques. Migracions realitzades amb 100% d'èxit.",
+        "tags": ["Migrate to Virtual Machines"]
       },
       {
-        "name": "[EDITAR] Projecte 2",
-        "description": "[EDITAR] Descripció breu del projecte, les tecnologies emprades i els resultats.",
-        "tags": ["Node.js", "API"],
-        "url": "#"
+        "name": "Disseny i implementació de Landing Zones",
+        "description": "Disseny i implementació de Landing Zones a GCP. Disseny i configuració de xarxes, interconnexió amb on-premises, gestió d'identitats i accessos, i bones pràctiques de seguretat.",
+        "tags": ["GCP", "Network", "Security", "IAM"]
       },
       {
-        "name": "[EDITAR] Projecte 3",
-        "description": "[EDITAR] Descripció breu del projecte i del seu impacte.",
-        "tags": ["React", "Docker"],
-        "url": "#"
+        "name": "Assessment de seguretat i bones pràctiques en plataforma cloud",
+        "description": "Assessment de seguretat i bones pràctiques a GCP. Revisió de configuracions i aplicar les mesures correctives corresponentes.",
+        "tags": ["GCP", "Security", "IAM", "Cloud Armor", "Security Command Center (SCC)", "Security Vulnerability Scanner (SCCVS)"]
       }
     ]
   },
