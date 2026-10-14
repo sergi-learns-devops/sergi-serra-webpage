@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sserra.dev/sitemap-index.xml

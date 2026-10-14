@@ -18,6 +18,43 @@ const langOptions = (Object.keys(languages) as Lang[]).map((code) => ({
   label: languages[code],
   href: localizedPath(code),
 }));
+
+/* ---- SEO ---- */
+const siteUrl = Astro.site ?? new URL("https://sserra.dev");
+/** URL canónica absoluta de la página actual. */
+const canonicalURL = new URL(localizedPath(lang), siteUrl).href;
+/** Mapa de códigos BCP-47 por idioma para hreflang. */
+const hreflangMap: Record<Lang, string> = {
+  es: "es-ES",
+  ca: "ca-ES",
+  en: "en-US",
+};
+/** Enlaces alternates (uno por idioma + x-default). */
+const alternateLinks = (Object.keys(languages) as Lang[]).map((code) => ({
+  hreflang: hreflangMap[code],
+  href: new URL(localizedPath(code), siteUrl).href,
+}));
+const ogImageURL = new URL("/og-image.png", siteUrl).href;
+
+/** Datos estructurados JSON-LD (Person). */
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Sergi Serra",
+  jobTitle: "Cloud Engineer & Architect",
+  url: siteUrl.href,
+  email: `mailto:${siteConfig.email}`,
+  sameAs: [siteConfig.linkedin, siteConfig.github, siteConfig.credly],
+  knowsAbout: [
+    "Google Cloud Platform",
+    "Terraform",
+    "Kubernetes",
+    "Docker",
+    "Infrastructure as Code",
+    "Cloud Security",
+    "DevOps",
+  ],
+};
 ---
 
 <!doctype html>
@@ -30,12 +67,40 @@ const langOptions = (Object.keys(languages) as Lang[]).map((code) => ({
 
     <title>{t.meta.title}</title>
     <meta name="description" content={t.meta.description} />
+    <meta name="author" content="Sergi Serra" />
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href={canonicalURL} />
+    {
+      alternateLinks.map((alt) => (
+        <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={siteUrl.href} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sergi Serra" />
     <meta property="og:title" content={t.meta.title} />
     <meta property="og:description" content={t.meta.description} />
-    <meta property="og:locale" content={lang} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:locale" content={hreflangMap[lang]} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={t.meta.title} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={t.meta.title} />
+    <meta name="twitter:description" content={t.meta.description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+    <!-- Datos estructurados (Person) -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(personSchema)}
+    />
 
     {/* Script anti-flash: aplica el tema antes del primer render. */}
     <script is:inline>

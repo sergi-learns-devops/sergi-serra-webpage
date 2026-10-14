@@ -4,19 +4,19 @@ import es from './es.json';
 
 /** Idiomas soportados. El primero es el idioma por defecto. */
 export const languages = {
+  es: 'Español',
   ca: 'Català',
   en: 'English',
-  es: 'Español',
 } as const;
 
 export type Lang = keyof typeof languages;
 
-export const defaultLang: Lang = 'ca';
+export const defaultLang: Lang = 'es';
 
-/** Estructura de las cadenas de traducción (tipada a partir del catalán). */
-export type UIStrings = typeof ca;
+/** Estructura de las cadenas de traducción (tipada a partir del castellano). */
+export type UIStrings = typeof es;
 
-const translations: Record<Lang, UIStrings> = { ca, en, es };
+const translations: Record<Lang, UIStrings> = { es, ca, en };
 
 /**
  * Obtiene el código de idioma a partir de la URL de Astro.
