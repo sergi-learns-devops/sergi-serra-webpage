@@ -97,15 +97,19 @@
         "tags": ["GCP", "Migrate to Virtual Machines"]
       },
       {
+        "name": "Reverse Engineering with Terraform",
+        "description": "Reverse engineering of existing resources on GCP with Terraform. Extraction of configuration and generation of Terraform files for infrastructure as code. Subsequently, developing a tool with AI to simplify the process for both GCP and AWS.",
+        "tags": ["GCP", "AWS", "Terraform", "Bash Scripting", "IA"]
+      },
+      {
         "name": "Design and implementation of Landing Zones",
         "description": "Design and implementation of Landing Zones on GCP. Network design and configuration, interconnection with on-premises, identity and access management, and security best practices.",
-        "tags": ["GCP", "Network", "Security", "IAM"]
+        "tags": ["GCP", "Network", "Security", "IAM", "Terraform"]
       },
       {
         "name": "Security assessment and best practices on cloud platform",
         "description": "Security assessment and best practices on GCP. Review configurations and apply the corresponding corrective measures.",
-        "tags": ["GCP", "Security", "IAM", "Cloud Armor", "Security Command Center (SCC)", "Security Vulnerability Scanner (SCCVS)"],
-        "url": "#"
+        "tags": ["GCP", "Security", "IAM", "Cloud Armor", "Security Command Center (SCC)", "Security Vulnerability Scanner (SCCVS)"]
       }
     ]
   },

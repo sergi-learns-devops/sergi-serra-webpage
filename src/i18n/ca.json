@@ -97,9 +97,14 @@
         "tags": ["GCP", "Migrate to Virtual Machines"]
       },
       {
+        "name": "Enginyeria inversa amb Terraform",
+        "description": "Enginyeria inversa de recursos existents a GCP amb Terraform. Extracció de la configuració i generació d'arxius Terraform per a la gestió d'infraestructura com a codi. Posteriorment, desenvolupar una eina amb IA per simplificar el procés tant per a GCP com per a AWS.",
+        "tags": ["GCP", "AWS", "Terraform", "Bash Scripting", "IA"]
+      },
+      {
         "name": "Disseny i implementació de Landing Zones",
         "description": "Disseny i implementació de Landing Zones a GCP. Disseny i configuració de xarxes, interconnexió amb on-premises, gestió d'identitats i accessos, i bones pràctiques de seguretat.",
-        "tags": ["GCP", "Network", "Security", "IAM"]
+        "tags": ["GCP", "Network", "Security", "IAM", "Terraform"]
       },
       {
         "name": "Assessment de seguretat i bones pràctiques en plataforma cloud",
