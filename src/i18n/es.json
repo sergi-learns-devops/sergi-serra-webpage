@@ -53,19 +53,40 @@
     "categories": [
       {
         "name": "Plataformas Cloud",
-        "items": ["Google Cloud Platform", "AWS (Starting)"]
+        "items": [
+          "Google Cloud Platform",
+          "AWS (Starting)"
+        ]
       },
       {
         "name": "Herramientas y DevOps",
-        "items": ["Terraform","Git&GitHub", "Docker", "Kubernetes", "GitHub Actions", "IA", "Bash Scripting", "Artifact Registry"]
+        "items": [
+          "Terraform",
+          "Git&GitHub",
+          "Docker",
+          "Kubernetes",
+          "GitHub Actions",
+          "IA",
+          "Bash Scripting",
+          "Artifact Registry"
+        ]
       },
       {
         "name": "SO",
-        "items": ["Linux", "Windows"]
+        "items": [
+          "Linux",
+          "Windows"
+        ]
       }
     ],
     "learningTitle": "Aprendiendo e interesado en...",
-    "learning": ["AWS (Starting)", "Ansible", "Argo CD", "Prometheus & Grafana", "Azure"]
+    "learning": [
+      "AWS (Starting)",
+      "Ansible",
+      "Argo CD",
+      "Prometheus & Grafana",
+      "Azure"
+    ]
   },
   "certs": {
     "title": "Certificaciones",
@@ -77,14 +98,50 @@
     "renewedLabel": "Renovada",
     "expiredLabel": "Caducada",
     "items": [
-      { "name": "Associate Cloud Engineer", "level": "Associate", "image": ".webp" },
-      { "name": "Professional Cloud Architect", "level": "Professional", "image": ".webp", "renewed": "2026" },
-      { "name": "Professional Cloud Network Engineer", "level": "Professional", "image": ".webp", "renewed": "2026" },
-      { "name": "Professional Cloud DevOps Engineer", "level": "Professional", "image": ".webp" },
-      { "name": "Professional Cloud Security Engineer", "level": "Professional", "image": ".webp" },
-      { "name": "Professional Cloud Developer", "level": "Professional", "image": ".webp" },
-      { "name": "Professional Cloud Database Engineer", "level": "Professional", "image": ".webp" },
-      { "name": "HashiCorp Certified: Terraform Associate (003)", "level": "Associate", "image": ".webp", "issuer": "HashiCorp", "status": "expired" }
+      {
+        "name": "Associate Cloud Engineer",
+        "level": "Associate",
+        "image": "/badges/associate_cloud_engineer.webp"
+      },
+      {
+        "name": "Professional Cloud Architect",
+        "level": "Professional",
+        "image": "/badges/professional_cloud_architect.webp",
+        "renewed": "2026"
+      },
+      {
+        "name": "Professional Cloud Network Engineer",
+        "level": "Professional",
+        "image": "/badges/professional_network_engineer.webp",
+        "renewed": "2026"
+      },
+      {
+        "name": "Professional Cloud DevOps Engineer",
+        "level": "Professional",
+        "image": "/badges/professional_devops_engineer.webp"
+      },
+      {
+        "name": "Professional Cloud Security Engineer",
+        "level": "Professional",
+        "image": "/badges/professional_security_engineer.webp"
+      },
+      {
+        "name": "Professional Cloud Developer",
+        "level": "Professional",
+        "image": "/badges/professional_cloud_developer.webp"
+      },
+      {
+        "name": "Professional Cloud Database Engineer",
+        "level": "Professional",
+        "image": "/badges/professional_database_engineer.webp"
+      },
+      {
+        "name": "HashiCorp Certified: Terraform Associate (003)",
+        "level": "Associate",
+        "image": "/badges/terraform_associate.webp",
+        "issuer": "HashiCorp",
+        "status": "expired"
+      }
     ]
   },
   "projects": {
@@ -94,27 +151,52 @@
       {
         "name": "Migración de workloads a Google Cloud Platform",
         "description": "Migraciones de VM a Google Cloud Platform. Implementar medidas de seguridad y buenas prácticas. Migraciones realizadas con 100% de éxito.",
-        "tags": ["GCP", "Migrate to Virtual Machines"]
+        "tags": [
+          "GCP",
+          "Migrate to Virtual Machines"
+        ]
       },
       {
         "name": "Ingeniería inversa con Terraform",
         "description": "Ingeniería inversa de recursos existentes en GCP con Terraform. Extracción de la configuración y generación de archivos Terraform para la gestión de infraestructura como código. Posteriormente, desarrollar una herramienta con IA para simplificar el proceso tanto para GCP como para AWS.",
-        "tags": ["GCP", "AWS", "Terraform", "Bash Scripting", "IA"]
+        "tags": [
+          "GCP",
+          "AWS",
+          "Terraform",
+          "Bash Scripting",
+          "IA"
+        ]
       },
       {
         "name": "Diseño e implementación de Landing Zones",
         "description": "Diseño e implementación de Landing Zones en GCP. Diseño y configuración de redes, interconexión con on-premises, gestión de identidades y accesos, y buenas prácticas de seguridad.",
-        "tags": ["GCP", "Network", "Security", "IAM", "Terraform"]
+        "tags": [
+          "GCP",
+          "Network",
+          "Security",
+          "IAM",
+          "Terraform"
+        ]
       },
       {
         "name": "Assessment de seguridad y buenas prácticas en plataforma cloud",
         "description": "Assessment de seguridad y buenas prácticas en GCP. Revisión de configuraciones y aplicar las medidas correctivas correspondientes.",
-        "tags": ["GCP", "Security", "IAM"]
+        "tags": [
+          "GCP",
+          "Security",
+          "IAM"
+        ]
       },
       {
         "name": "Despliegue de appliances de seguridad en GCP",
         "description": "Despliegue de appliances de seguridad de Fortinet y Palo Alto en GCP. Configuración de redes, reglas de firewall e integración con la infraestructura existente.",
-        "tags": ["GCP", "Security", "Fortinet", "Palo Alto", "Network"]
+        "tags": [
+          "GCP",
+          "Security",
+          "Fortinet",
+          "Palo Alto",
+          "Network"
+        ]
       }
     ]
   },
@@ -143,7 +225,14 @@
       }
     ],
     "stackTitle": "Stack técnico",
-    "stack": ["Astro", "TypeScript", "i18n nativo de Astro", "CSS (variables de tema)", "Kiro CLI (agentes de IA)", "Playwright (QA)"],
+    "stack": [
+      "Astro",
+      "TypeScript",
+      "i18n nativo de Astro",
+      "CSS (variables de tema)",
+      "Kiro CLI (agentes de IA)",
+      "Playwright (QA)"
+    ],
     "promptTitle": "El prompt real",
     "promptIntro": "Esta es, en esencia, la petición con la que nació la web:",
     "promptText": "«Quiero crear mi propia página web con Astro para darme visibilidad para un futuro empleo. Sobre el diseño, que se vea atractivo, profesional y orientado a TI, agradable a la vista y de fácil lectura. Que esté disponible en catalán, inglés y castellano, con botones hacia mi LinkedIn y GitHub, y que se pueda alternar entre modo claro y oscuro.»",
