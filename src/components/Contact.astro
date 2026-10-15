@@ -10,7 +10,7 @@ const { t } = Astro.props;
 ---
 
 <section id="contact" class="section" aria-labelledby="contact-title">
-  <div class="container">
+  <div class="container" data-reveal>
     <h2 id="contact-title" class="section__title">{t.contact.title}</h2>
     <p class="section__intro">{t.contact.intro}</p>
     <div class="contact__links">
@@ -31,6 +31,48 @@ const { t } = Astro.props;
         </svg>
         <span>{t.contact.emailLabel}</span>
       </a>
+
+      <button
+        type="button"
+        class="contact-card contact-card--copy"
+        id="copy-email"
+        data-email={siteConfig.email}
+        data-label-copy={t.contact.copyEmail}
+        data-label-copied={t.contact.copied}
+        aria-label={t.contact.copyEmail}
+      >
+        <svg
+          class="icon-copy"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <svg
+          class="icon-check"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          style="display:none"
+        >
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span class="contact-card__copy-label">{t.contact.copyEmail}</span>
+      </button>
 
       <a
         class="contact-card"
@@ -74,3 +116,52 @@ const { t } = Astro.props;
     </div>
   </div>
 </section>
+
+<script>
+  const btn = document.getElementById("copy-email");
+  if (btn) {
+    const email = btn.getAttribute("data-email") || "";
+    const labelEl = btn.querySelector(".contact-card__copy-label");
+    const iconCopy = btn.querySelector<HTMLElement>(".icon-copy");
+    const iconCheck = btn.querySelector<HTMLElement>(".icon-check");
+    const labelCopy = btn.getAttribute("data-label-copy") || "";
+    const labelCopied = btn.getAttribute("data-label-copied") || "";
+    let resetTimer: number | undefined;
+
+    const showCopied = () => {
+      if (labelEl) labelEl.textContent = labelCopied;
+      if (iconCopy) iconCopy.style.display = "none";
+      if (iconCheck) iconCheck.style.display = "";
+      btn.classList.add("is-copied");
+      window.clearTimeout(resetTimer);
+      resetTimer = window.setTimeout(() => {
+        if (labelEl) labelEl.textContent = labelCopy;
+        if (iconCopy) iconCopy.style.display = "";
+        if (iconCheck) iconCheck.style.display = "none";
+        btn.classList.remove("is-copied");
+      }, 2000);
+    };
+
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(email);
+        showCopied();
+      } catch (e) {
+        // Fallback para navegadores sin Clipboard API.
+        const ta = document.createElement("textarea");
+        ta.value = email;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand("copy");
+          showCopied();
+        } catch (err) {
+          /* sin acción */
+        }
+        document.body.removeChild(ta);
+      }
+    });
+  }
+</script>

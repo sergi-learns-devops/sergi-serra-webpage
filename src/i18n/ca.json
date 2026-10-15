@@ -32,7 +32,8 @@
     "ctaProjects": "Veure projectes",
     "ctaContact": "Contacta amb mi",
     "cvEs": "CV (Castellà)",
-    "cvEn": "CV (Anglès)"
+    "cvEn": "CV (Anglès)",
+    "certsBadge": "7× Certificat per Google Cloud"
   },
   "about": {
     "title": "Sobre mi",
@@ -76,14 +77,14 @@
     "renewedLabel": "Renovada",
     "expiredLabel": "Caducada",
     "items": [
-      { "name": "Associate Cloud Engineer", "level": "Associate", "image": "/badges/associate_cloud_enginner.png" },
-      { "name": "Professional Cloud Architect", "level": "Professional", "image": "/badges/professional_cloud_architect.png", "renewed": "2026" },
-      { "name": "Professional Cloud Network Engineer", "level": "Professional", "image": "/badges/professional_network_engineer.png", "renewed": "2026" },
-      { "name": "Professional Cloud DevOps Engineer", "level": "Professional", "image": "/badges/professional_devops_engineer.png" },
-      { "name": "Professional Cloud Security Engineer", "level": "Professional", "image": "/badges/professional_security_engineer.png" },
-      { "name": "Professional Cloud Developer", "level": "Professional", "image": "/badges/professional_cloud_developer.png" },
-      { "name": "Professional Cloud Database Engineer", "level": "Professional", "image": "/badges/professional_database_engineer.png" },
-      { "name": "HashiCorp Certified: Terraform Associate (003)", "level": "Associate", "image": "/badges/terraform_associate.png", "issuer": "HashiCorp", "status": "expired" }
+      { "name": "Associate Cloud Engineer", "level": "Associate", "image": ".webp" },
+      { "name": "Professional Cloud Architect", "level": "Professional", "image": ".webp", "renewed": "2026" },
+      { "name": "Professional Cloud Network Engineer", "level": "Professional", "image": ".webp", "renewed": "2026" },
+      { "name": "Professional Cloud DevOps Engineer", "level": "Professional", "image": ".webp" },
+      { "name": "Professional Cloud Security Engineer", "level": "Professional", "image": ".webp" },
+      { "name": "Professional Cloud Developer", "level": "Professional", "image": ".webp" },
+      { "name": "Professional Cloud Database Engineer", "level": "Professional", "image": ".webp" },
+      { "name": "HashiCorp Certified: Terraform Associate (003)", "level": "Associate", "image": ".webp", "issuer": "HashiCorp", "status": "expired" }
     ]
   },
   "projects": {
@@ -167,6 +168,8 @@
     "intro": "Estàs buscant algú com jo? M'encantarà parlar amb tu. Pots contactar-me pels següents canals.",
     "emailLabel": "Correu electrònic",
     "email": "s.serramarques@gmail.com",
+    "copyEmail": "Copia el correu",
+    "copied": "Copiat!",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub"
   },
