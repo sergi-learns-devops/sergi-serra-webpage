@@ -117,7 +117,8 @@
       {
         "name": "Professional Cloud DevOps Engineer",
         "level": "Professional",
-        "image": "/badges/professional_devops_engineer.webp"
+        "image": "/badges/professional_devops_engineer.webp",
+        "renewed": "2026"
       },
       {
         "name": "Professional Cloud Security Engineer",
