@@ -121,14 +121,15 @@
         "renewed": "2026"
       },
       {
+        "name": "Professional Cloud Developer",
+        "level": "Professional",
+        "image": "/badges/professional_cloud_developer.webp",
+        "renewed": "2026"
+      },
+      {
         "name": "Professional Cloud Security Engineer",
         "level": "Professional",
         "image": "/badges/professional_security_engineer.webp"
-      },
-      {
-        "name": "Professional Cloud Developer",
-        "level": "Professional",
-        "image": "/badges/professional_cloud_developer.webp"
       },
       {
         "name": "Professional Cloud Database Engineer",
