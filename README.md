@@ -8,7 +8,7 @@ Web personal y portfolio profesional orientado a TI, construida con [Astro](http
 
 ## ¿Cómo se hizo? (Vibe Coding)
 
-Esta web se construyó dirigiendo un flujo de agentes de IA mediante **[Kiro CLI](https://kiro.dev)**, un agente de IA que trabaja en la terminal. El proceso, en tres fases:
+Esta web se construyó dirigiendo un flujo de agentes de IA que trabajan en la terminal. El proceso, en tres fases:
 
 ### 1. Orquestación vía prompt
 
@@ -20,7 +20,7 @@ A partir de ahí se concretaron los requisitos técnicos: i18n nativo de Astro, 
 
 ### 2. Agentes especializados en pipeline
 
-Kiro CLI orquestó varios agentes de IA especializados, cada uno encargado de su parte, en cadena:
+Se orquestaron varios agentes de IA especializados, cada uno encargado de su parte, en cadena:
 
 ```
 desarrollo full-stack  →  diseño UI/UX  →  QA
@@ -48,7 +48,7 @@ desarrollo full-stack  →  diseño UI/UX  →  QA
 | Lenguaje        | TypeScript                        |
 | i18n            | i18n nativo de Astro (CA/EN/ES)   |
 | Estilos         | CSS con variables de tema         |
-| Herramienta IA  | Kiro CLI (orquestación de agentes)|
+| Herramienta IA  | Agentes de IA en la terminal (orquestación)|
 | QA              | Playwright                        |
 
 ---

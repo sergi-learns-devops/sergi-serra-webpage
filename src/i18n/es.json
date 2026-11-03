@@ -217,7 +217,7 @@
       {
         "agent": "ui-designer",
         "name": "Agentes especializados en pipeline",
-        "description": "Kiro CLI orquestó varios agentes de IA en cadena: desarrollo full-stack → diseño UI/UX → QA. Cada agente, especializado en su tarea."
+        "description": "Se orquestaron varios agentes de IA en cadena: desarrollo full-stack → diseño UI/UX → QA. Cada agente, especializado en su tarea."
       },
       {
         "agent": "qa-agent",
@@ -231,7 +231,7 @@
       "TypeScript",
       "i18n nativo de Astro",
       "CSS (variables de tema)",
-      "Kiro CLI (agentes de IA)",
+      "Agentes de IA (CLI)",
       "Playwright (QA)"
     ],
     "promptTitle": "El prompt real",

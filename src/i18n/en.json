@@ -220,7 +220,7 @@
       {
         "agent": "ui-designer",
         "name": "Specialized agents in a pipeline",
-        "description": "Kiro CLI orchestrated several AI agents in sequence: full-stack development → UI/UX design → QA. Each agent specialized in its own task."
+        "description": "Several AI agents were orchestrated in sequence: full-stack development → UI/UX design → QA. Each agent specialized in its own task."
       },
       {
         "agent": "qa-agent",
@@ -234,7 +234,7 @@
       "TypeScript",
       "Astro native i18n",
       "CSS (theme variables)",
-      "Kiro CLI (AI agents)",
+      "AI agents (CLI)",
       "Playwright (QA)"
     ],
     "promptTitle": "The real prompt",
