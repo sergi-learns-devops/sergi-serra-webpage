@@ -33,7 +33,7 @@ desarrollo full-stack  →  diseño UI/UX  →  QA
 ### 3. Verificación y control humano
 
 - `npm run build` limpio (generación estática de las 3 rutas de idioma).
-- Pruebas visuales automatizadas con **Playwright** (navegador real).
+- Pruebas visuales en navegador real con **Playwright** (verificación puntual durante el desarrollo; los tests no se incluyen en el repo).
 - Revisión de accesibilidad: contraste AA, HTML semántico, atributos ARIA, *skip-link*.
 
 **La decisión y la validación finales son humanas.** La IA ejecuta; el criterio, los requisitos y la revisión del resultado los pongo yo.
@@ -49,7 +49,7 @@ desarrollo full-stack  →  diseño UI/UX  →  QA
 | i18n            | i18n nativo de Astro (CA/EN/ES)   |
 | Estilos         | CSS con variables de tema         |
 | Herramienta IA  | Agentes de IA en la terminal (orquestación)|
-| QA              | Playwright                        |
+| QA              | Playwright (verificación puntual) |
 
 ---
 
@@ -57,12 +57,12 @@ desarrollo full-stack  →  diseño UI/UX  →  QA
 
 ```
 src/
-├── components/      # Hero, About, Skills, Projects, VibeCoding, Contact
+├── components/      # Hero, About, Skills, Certifications, Projects, VibeCoding, Contact
 ├── i18n/            # ca.json, en.json, es.json + ui.ts (utilidades)
 ├── layouts/         # BaseLayout.astro (head, header, footer, lógica de tema)
-├── pages/           # index.astro (ca), en/index.astro, es/index.astro
+├── pages/           # index.astro (es), ca/index.astro, en/index.astro, 404.astro
 ├── styles/          # global.css (variables de tema claro/oscuro)
-└── config.ts        # Enlaces (LinkedIn, GitHub, repo, email)
+└── config.ts        # Enlaces (LinkedIn, GitHub, Credly, repo), email y CVs
 ```
 
 ---
@@ -80,11 +80,11 @@ npm run preview  # Previsualizar el build
 
 ## Idiomas
 
-- **Catalán** (`ca`) — idioma por defecto, sin prefijo: `/`
+- **Castellano** (`es`) — idioma por defecto, sin prefijo: `/`
+- **Catalán** (`ca`) — `/ca`
 - **Inglés** (`en`) — `/en`
-- **Castellano** (`es`) — `/es`
 
-El contenido editable está en `src/i18n/{ca,en,es}.json`. Los textos pendientes de personalizar están marcados con `[EDITAR]`.
+El contenido editable está en `src/i18n/{ca,en,es}.json`. Los enlaces externos, el correo y los CVs se configuran en `src/config.ts`.
 
 ---
 

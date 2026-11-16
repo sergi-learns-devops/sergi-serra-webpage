@@ -3,6 +3,12 @@
     "title": "Sergi Serra — Perfil professional TI",
     "description": "Pàgina personal de Sergi Serra. Perfil professional orientat a tecnologies de la informació: experiència, habilitats i projectes."
   },
+  "notFound": {
+    "title": "Pàgina no trobada",
+    "description": "La pàgina que busques no existeix o s'ha mogut a una altra adreça.",
+    "home": "Tornar a l'inici",
+    "contact": "Contactar"
+  },
   "nav": {
     "about": "Sobre mi",
     "skills": "Habilitats",

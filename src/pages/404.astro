@@ -1,0 +1,211 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { localizedPath, type Lang } from "../i18n/ui";
+import es from "../i18n/es.json";
+import ca from "../i18n/ca.json";
+import en from "../i18n/en.json";
+
+/**
+ * Página 404 única para todo el sitio.
+ *
+ * Astro solo genera un `404.html` en la raíz, así que la versión textual se
+ * decide en el cliente según el prefijo de la URL (`/ca/...`, `/en/...`).
+ * El HTML se renderiza en el idioma por defecto (castellano), de modo que la
+ * página sigue siendo legible sin JavaScript.
+ */
+const translations = { es, ca, en } as const;
+type UiLang = keyof typeof translations;
+
+/** Textos de interfaz que necesita esta página en los tres idiomas. */
+const ui = Object.fromEntries(
+  (Object.keys(translations) as UiLang[]).map((code) => {
+    const tr = translations[code];
+    return [
+      code,
+      {
+        notFound: tr.notFound,
+        nav: {
+          menu: tr.nav.menu,
+          skipToContent: tr.nav.skipToContent,
+          items: [
+            tr.nav.about,
+            tr.nav.skills,
+            tr.nav.certs,
+            tr.nav.projects,
+            tr.nav.vibe,
+            tr.nav.contact,
+          ],
+        },
+        theme: tr.theme.toggle,
+        language: tr.language.label,
+        footer: tr.footer,
+      },
+    ];
+  })
+);
+
+/** Ruta de la home de cada idioma. */
+const paths = Object.fromEntries(
+  (Object.keys(translations) as UiLang[]).map((code) => [
+    code,
+    localizedPath(code as Lang),
+  ])
+);
+---
+
+<BaseLayout noindex linksToHome>
+  <section class="not-found" aria-labelledby="not-found-title">
+    <div class="container not-found__inner">
+      <p class="not-found__code" aria-hidden="true">404</p>
+      <h1 id="not-found-title" class="not-found__title">
+        {translations.es.notFound.title}
+      </h1>
+      <p class="not-found__text">{translations.es.notFound.description}</p>
+      <div class="not-found__actions">
+        <a class="btn btn--primary not-found__home" href={localizedPath("es")}>
+          {translations.es.notFound.home}
+        </a>
+        <a
+          class="btn btn--secondary not-found__contact"
+          href={`${localizedPath("es")}#contact`}
+        >
+          {translations.es.notFound.contact}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ ui, paths }}>
+    (function () {
+      function localize() {
+        // Idioma según el prefijo de la URL solicitada; castellano por defecto.
+        var match = window.location.pathname.match(/^\/(ca|en)(?:\/|$)/);
+        var lang = match ? match[1] : "es";
+        var tr = ui[lang] || ui.es;
+        var homeHref = paths[lang] || paths.es;
+
+        document.documentElement.lang = lang;
+        document.title = tr.notFound.title + " — Sergi Serra";
+
+        var skip = document.querySelector(".skip-link");
+        if (skip) skip.textContent = tr.nav.skipToContent;
+
+        var nav = document.querySelector(".site-nav");
+        if (nav) nav.setAttribute("aria-label", tr.nav.menu);
+
+        var navLinks = document.querySelectorAll(".site-nav__link");
+        var sections = [
+          "about",
+          "skills",
+          "certs",
+          "projects",
+          "vibe",
+          "contact",
+        ];
+        navLinks.forEach(function (link, i) {
+          if (tr.nav.items[i]) link.textContent = tr.nav.items[i];
+          if (sections[i]) link.setAttribute("href", homeHref + "#" + sections[i]);
+        });
+
+        var brand = document.querySelector(".site-header__brand");
+        if (brand) brand.setAttribute("href", homeHref);
+
+        var themeToggle = document.getElementById("theme-toggle");
+        if (themeToggle) {
+          themeToggle.setAttribute("aria-label", tr.theme);
+          themeToggle.setAttribute("title", tr.theme);
+        }
+
+        var langSelect = document.getElementById("lang-select");
+        if (langSelect) {
+          langSelect.setAttribute("aria-label", tr.language);
+          langSelect.value = homeHref;
+        }
+
+        var footer = document.querySelector(".site-footer__inner > p");
+        if (footer) {
+          footer.textContent =
+            "© " +
+            new Date().getFullYear() +
+            " Sergi Serra. " +
+            tr.footer.rights +
+            " " +
+            tr.footer.builtWith;
+        }
+
+        var title = document.querySelector(".not-found__title");
+        if (title) title.textContent = tr.notFound.title;
+
+        var text = document.querySelector(".not-found__text");
+        if (text) text.textContent = tr.notFound.description;
+
+        var home = document.querySelector(".not-found__home");
+        if (home) {
+          home.textContent = tr.notFound.home;
+          home.setAttribute("href", homeHref);
+        }
+
+        var contact = document.querySelector(".not-found__contact");
+        if (contact) {
+          contact.textContent = tr.notFound.contact;
+          contact.setAttribute("href", homeHref + "#contact");
+        }
+      }
+
+      // El footer se renderiza después de este script: esperamos al DOM.
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", localize);
+      } else {
+        localize();
+      }
+    })();
+  </script>
+</BaseLayout>
+
+<style>
+  .not-found {
+    min-height: min(78vh, 48rem);
+    display: flex;
+    align-items: center;
+  }
+
+  .not-found__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .not-found__code {
+    font-family: var(--font-mono);
+    font-size: clamp(5rem, 20vw, 10rem);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    margin-bottom: var(--space-md);
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+  }
+
+  .not-found__title {
+    font-size: clamp(1.6rem, 4vw, 2.25rem);
+    margin-bottom: var(--space-sm);
+  }
+
+  .not-found__text {
+    color: var(--color-text-muted);
+    max-width: var(--max-width-prose);
+    font-size: 1.075rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .not-found__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+  }
+</style>

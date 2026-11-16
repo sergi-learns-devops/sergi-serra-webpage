@@ -9,8 +9,21 @@ import {
   type Lang,
 } from "../i18n/ui";
 
+interface Props {
+  /** Página no indexable (p. ej. 404): añade `noindex` y omite canonical/hreflang. */
+  noindex?: boolean;
+  /** Enlaza la navegación a las secciones de la home; útil fuera de la home. */
+  linksToHome?: boolean;
+}
+
+const { noindex = false, linksToHome = false } = Astro.props;
+
 const lang: Lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+/** Ancla de navegación: `#id` en la propia página, `/<lang>#id` desde otra. */
+const sectionHref = (id: string) =>
+  linksToHome ? `${localizedPath(lang)}#${id}` : `#${id}`;
 
 /** Idiomas disponibles para el selector, con la ruta equivalente. */
 const langOptions = (Object.keys(languages) as Lang[]).map((code) => ({
@@ -77,13 +90,18 @@ const personSchema = {
     <meta name="author" content="Sergi Serra" />
 
     <!-- Canonical + hreflang -->
-    <link rel="canonical" href={canonicalURL} />
     {
-      alternateLinks.map((alt) => (
-        <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
-      ))
+      !noindex && (
+        <>
+          <link rel="canonical" href={canonicalURL} />
+          {alternateLinks.map((alt) => (
+            <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+          ))}
+          <link rel="alternate" hreflang="x-default" href={siteUrl.href} />
+        </>
+      )
     }
-    <link rel="alternate" hreflang="x-default" href={siteUrl.href} />
+    {noindex && <meta name="robots" content="noindex" />}
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -137,22 +155,22 @@ const personSchema = {
         <nav class="site-nav" aria-label={t.nav.menu}>
           <ul class="site-nav__list">
             <li>
-              <a class="site-nav__link" href="#about">{t.nav.about}</a>
+              <a class="site-nav__link" href={sectionHref("about")}>{t.nav.about}</a>
             </li>
             <li>
-              <a class="site-nav__link" href="#skills">{t.nav.skills}</a>
+              <a class="site-nav__link" href={sectionHref("skills")}>{t.nav.skills}</a>
             </li>
             <li>
-              <a class="site-nav__link" href="#certs">{t.nav.certs}</a>
+              <a class="site-nav__link" href={sectionHref("certs")}>{t.nav.certs}</a>
             </li>
             <li>
-              <a class="site-nav__link" href="#projects">{t.nav.projects}</a>
+              <a class="site-nav__link" href={sectionHref("projects")}>{t.nav.projects}</a>
             </li>
             <li>
-              <a class="site-nav__link" href="#vibe">{t.nav.vibe}</a>
+              <a class="site-nav__link" href={sectionHref("vibe")}>{t.nav.vibe}</a>
             </li>
             <li>
-              <a class="site-nav__link" href="#contact">{t.nav.contact}</a>
+              <a class="site-nav__link" href={sectionHref("contact")}>{t.nav.contact}</a>
             </li>
           </ul>
 

@@ -3,6 +3,12 @@
     "title": "Sergi Serra — Perfil profesional TI",
     "description": "Página personal de Sergi Serra. Perfil profesional orientado a tecnologías de la información: experiencia, habilidades y proyectos."
   },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o se ha movido a otra dirección.",
+    "home": "Volver al inicio",
+    "contact": "Contactar"
+  },
   "nav": {
     "about": "Sobre mí",
     "skills": "Habilidades",
@@ -185,7 +191,10 @@
         "tags": [
           "GCP",
           "Security",
-          "IAM"
+          "IAM",
+          "Cloud Armor",
+          "Security Command Center (SCC)",
+          "Security Vulnerability Scanner (SCCVS)"
         ]
       },
       {
