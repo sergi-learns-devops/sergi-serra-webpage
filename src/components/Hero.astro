@@ -10,79 +10,133 @@ const { t } = Astro.props;
 ---
 
 <section class="hero">
-  <div class="container">
-    <p class="hero__greeting">{t.hero.greeting}</p>
-    <h1 class="hero__name">{t.hero.name}</h1>
-    <p class="hero__role">{t.hero.role}</p>
-    <a class="hero__certs-badge" href="#certs">
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-      >
-        <path d="M9 12l2 2 4-4"></path>
-        <circle cx="12" cy="12" r="9"></circle>
-      </svg>
-      <span>{t.hero.certsBadge}</span>
-    </a>
-    <p class="hero__tagline">{t.hero.tagline}</p>
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="#projects">{t.hero.ctaProjects}</a>
-      <a class="btn btn--secondary" href="#contact">{t.hero.ctaContact}</a>
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <p class="hero__greeting">{t.hero.greeting}</p>
+      <h1 class="hero__name">{t.hero.name}</h1>
+      <p class="hero__role">{t.hero.role}</p>
+      <a class="hero__certs-badge" href="#certs">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M9 12l2 2 4-4"></path>
+          <circle cx="12" cy="12" r="9"></circle>
+        </svg>
+        <span>{t.hero.certsBadge}</span>
+      </a>
+      <p class="hero__tagline">{t.hero.tagline}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#projects">{t.hero.ctaProjects}</a>
+        <a class="btn btn--secondary" href="#contact">{t.hero.ctaContact}</a>
+      </div>
+      <div class="hero__cv">
+        <a
+          class="btn btn--cv"
+          href={siteConfig.cv.es}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          {t.hero.cvEs}
+        </a>
+        <a
+          class="btn btn--cv"
+          href={siteConfig.cv.en}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          {t.hero.cvEn}
+        </a>
+      </div>
     </div>
-    <div class="hero__cv">
-      <a
-        class="btn btn--cv"
-        href={siteConfig.cv.es}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-          <polyline points="7 10 12 15 17 10"></polyline>
-          <line x1="12" y1="15" x2="12" y2="3"></line>
-        </svg>
-        {t.hero.cvEs}
-      </a>
-      <a
-        class="btn btn--cv"
-        href={siteConfig.cv.en}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-          <polyline points="7 10 12 15 17 10"></polyline>
-          <line x1="12" y1="15" x2="12" y2="3"></line>
-        </svg>
-        {t.hero.cvEn}
-      </a>
+
+    <!-- Ilustración decorativa: landing zone (organización > proyectos > hub de red).
+         Sin texto: es idéntica en los tres idiomas y se tiñe con los tokens del tema. -->
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 480 400" focusable="false">
+        <defs>
+          <linearGradient id="art-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" class="art-stop art-stop--a"></stop>
+            <stop offset="1" class="art-stop art-stop--b"></stop>
+          </linearGradient>
+          <g id="art-project">
+            <rect class="art-box" x="0" y="0" width="172" height="112" rx="16"></rect>
+            <rect class="art-bar" x="20" y="20" width="72" height="8" rx="4"></rect>
+            <rect class="art-chip" x="20" y="60" width="22" height="22" rx="6"></rect>
+            <rect class="art-chip" x="50" y="60" width="22" height="22" rx="6"></rect>
+            <rect class="art-chip" x="80" y="60" width="22" height="22" rx="6"></rect>
+          </g>
+        </defs>
+
+        <rect class="art-org" x="6" y="6" width="468" height="388" rx="28"></rect>
+
+        <use href="#art-project" x="34" y="38"></use>
+        <use href="#art-project" x="274" y="38"></use>
+        <use href="#art-project" x="34" y="250"></use>
+        <use href="#art-project" x="274" y="250"></use>
+
+        <!-- Enlaces hub-and-spoke (base fija + flujo animado) -->
+        <g class="art-links">
+          <path d="M206 94 C 236 94 240 140 240 174"></path>
+          <path d="M274 94 C 244 94 240 140 240 174"></path>
+          <path d="M206 306 C 236 306 240 260 240 226"></path>
+          <path d="M274 306 C 244 306 240 260 240 226"></path>
+        </g>
+        <g class="art-flow">
+          <path d="M206 94 C 236 94 240 140 240 174"></path>
+          <path d="M274 94 C 244 94 240 140 240 174"></path>
+          <path d="M206 306 C 236 306 240 260 240 226"></path>
+          <path d="M274 306 C 244 306 240 260 240 226"></path>
+        </g>
+
+        <circle class="art-node" cx="206" cy="94" r="6"></circle>
+        <circle class="art-node" cx="274" cy="94" r="6"></circle>
+        <circle class="art-node" cx="206" cy="306" r="6"></circle>
+        <circle class="art-node" cx="274" cy="306" r="6"></circle>
+
+        <!-- Hub de red con escudo -->
+        <circle class="art-hub-ring" cx="240" cy="200" r="36"></circle>
+        <circle class="art-hub" cx="240" cy="200" r="26"></circle>
+        <path class="art-shield" d="M240 186 l12 4.5 v9 c0 8 -5.5 13 -12 16 c-6.5 -3 -12 -8 -12 -16 v-9 z"></path>
+        <path class="art-shield-check" d="M234 200 l4 4 l8 -8"></path>
+      </svg>
     </div>
   </div>
 </section>

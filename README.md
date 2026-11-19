@@ -14,7 +14,7 @@ Esta web se construyó dirigiendo un flujo de agentes de IA que trabajan en la t
 
 Todo partió de una petición en lenguaje natural que definía los requisitos del producto:
 
-> «Quiero crear mi propia página web con Astro para darme visibilidad para un futuro empleo. Sobre el diseño, que se vea atractivo, profesional y orientado a TI, agradable a la vista y de fácil lectura. Que esté disponible en catalán, inglés y castellano, con botones hacia mi LinkedIn y GitHub, y que se pueda alternar entre modo claro y oscuro.»
+> «Quiero crear mi propia página web con Astro para tener más visibilidad y disponer de un espacio donde poder explicar mi trayectoria actual. Sobre el diseño, que se vea atractivo, profesional y orientado a TI, agradable a la vista y de fácil lectura. Que esté disponible en catalán, inglés y castellano, con botones hacia mi LinkedIn y GitHub, y que se pueda alternar entre modo claro y oscuro.»
 
 A partir de ahí se concretaron los requisitos técnicos: i18n nativo de Astro, modo claro/oscuro sin parpadeo, accesibilidad (contraste AA, HTML semántico) y diseño responsive.
 

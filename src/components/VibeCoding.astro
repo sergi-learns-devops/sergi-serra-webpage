@@ -14,16 +14,15 @@ const { t } = Astro.props;
     <h2 id="vibe-title" class="section__title">{t.vibe.title}</h2>
     <p class="section__intro">{t.vibe.intro}</p>
 
-    <!-- Diagrama del pipeline de agentes -->
+    <!-- Flujo de agentes: un único recorrido, accesible (lista ordenada) -->
     <h3 class="vibe__subtitle vibe__subtitle--center">{t.vibe.workflowTitle}</h3>
     <p class="vibe__hint vibe__hint--center">{t.vibe.workflowIntro}</p>
 
-    <div class="vibe-pipeline" role="img" aria-label={t.vibe.workflowTitle}>
-      <!-- Nodo inicial: Prompt -->
-      <div class="pipeline-node pipeline-node--endpoint">
+    <ol class="vibe-flow" role="list">
+      <li class="vibe-flow__end">
         <svg
-          width="18"
-          height="18"
+          width="20"
+          height="20"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -35,34 +34,26 @@ const { t } = Astro.props;
           <polyline points="4 17 10 11 4 5"></polyline>
           <line x1="12" y1="19" x2="20" y2="19"></line>
         </svg>
-        <span class="pipeline-node__label">{t.vibe.diagramStart}</span>
-      </div>
+        <span class="vibe-flow__end-label">{t.vibe.diagramStart}</span>
+      </li>
 
-      <span class="pipeline-arrow" aria-hidden="true">→</span>
-
-      <!-- Nodos de agentes -->
       {
         t.vibe.steps.map((step, i) => (
-          <>
-            <div class="pipeline-node pipeline-node--agent">
-              <span class="pipeline-node__step" aria-hidden="true">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span class="pipeline-node__agent">{step.agent}</span>
-              <span class="pipeline-node__role">{step.name}</span>
-            </div>
-            <span class="pipeline-arrow" aria-hidden="true">
-              →
+          <li class="vibe-flow__step">
+            <span class="vibe-flow__num" aria-hidden="true">
+              {String(i + 1).padStart(2, "0")}
             </span>
-          </>
+            <code class="vibe-flow__agent">{step.agent}</code>
+            <h4 class="vibe-flow__name">{step.name}</h4>
+            <p class="vibe-flow__desc">{step.description}</p>
+          </li>
         ))
       }
 
-      <!-- Nodo final: Deploy -->
-      <div class="pipeline-node pipeline-node--endpoint pipeline-node--deploy">
+      <li class="vibe-flow__end vibe-flow__end--deploy">
         <svg
-          width="18"
-          height="18"
+          width="20"
+          height="20"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -76,33 +67,13 @@ const { t } = Astro.props;
           <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
           <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
         </svg>
-        <span class="pipeline-node__label">{t.vibe.diagramEnd}</span>
-      </div>
-    </div>
+        <span class="vibe-flow__end-label">{t.vibe.diagramEnd}</span>
+      </li>
+    </ol>
 
+    <!-- Stack + prompt -->
     <div class="vibe__layout">
-      <!-- Detalle de pasos -->
-      <div class="vibe__workflow">
-        <ol class="vibe__steps">
-          {
-            t.vibe.steps.map((step, i) => (
-              <li class="vibe-step">
-                <span class="vibe-step__num" aria-hidden="true">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div class="vibe-step__body">
-                  <h4 class="vibe-step__name">{step.name}</h4>
-                  <p class="vibe-step__desc">{step.description}</p>
-                </div>
-              </li>
-            ))
-          }
-        </ol>
-      </div>
-
-      <!-- Stack + prompt -->
-      <aside class="vibe__side">
-        <div class="vibe-card">
+      <div class="vibe-card">
           <h3 class="vibe__subtitle">{t.vibe.stackTitle}</h3>
           <ul class="vibe-card__stack">
             {t.vibe.stack.map((item) => <li class="tag">{item}</li>)}
@@ -152,7 +123,6 @@ const { t } = Astro.props;
             </svg>
           </a>
         </figure>
-      </aside>
     </div>
 
     <!-- Otros proyectos vibe-codeados -->

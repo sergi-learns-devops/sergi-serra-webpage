@@ -102,6 +102,9 @@
   /* Relieve interior de las tarjetas (solo visible en oscuro) */
   --card-inset: 0 0 0 0 transparent;
 
+  /* Intensidad de los resplandores del hero */
+  --glow-k: 1;
+
   --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06),
     0 1px 3px rgba(16, 24, 40, 0.08);
   --shadow: 0 4px 12px rgba(16, 24, 40, 0.08),
@@ -154,6 +157,7 @@
   --chip-border: #2c3548;
 
   --card-inset: inset 0 1px 0 rgb(255 255 255 / 0.05);
+  --glow-k: 1.7;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
   --shadow: 0 6px 18px rgba(0, 0, 0, 0.45), 0 16px 40px rgba(0, 0, 0, 0.5);
@@ -600,17 +604,17 @@ main {
   inset: 0;
   background: radial-gradient(
       46rem 30rem at 82% -12%,
-      color-mix(in srgb, var(--color-accent) 20%, transparent),
+      color-mix(in srgb, var(--color-accent) calc(20% * var(--glow-k)), transparent),
       transparent 70%
     ),
     radial-gradient(
       38rem 26rem at -5% 10%,
-      color-mix(in srgb, var(--color-primary) 18%, transparent),
+      color-mix(in srgb, var(--color-primary) calc(18% * var(--glow-k)), transparent),
       transparent 70%
     ),
     radial-gradient(
       30rem 22rem at 60% 120%,
-      color-mix(in srgb, var(--color-cyan) 16%, transparent),
+      color-mix(in srgb, var(--color-cyan) calc(16% * var(--glow-k)), transparent),
       transparent 70%
     );
   z-index: -2;
@@ -668,7 +672,10 @@ main {
 }
 
 .hero__name {
-  font-size: clamp(2.75rem, 9vw, 5rem);
+  font-size: clamp(2.75rem, 2rem + 5vw, 5.25rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
   margin-bottom: var(--space-xs);
   background: var(--gradient-text);
   -webkit-background-clip: text;
@@ -743,6 +750,131 @@ main {
   color: var(--color-primary);
   border-color: var(--color-primary);
   border-style: solid;
+}
+
+/* Hero a dos columnas: texto + ilustración (solo en pantallas anchas) */
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.hero__art {
+  display: none;
+}
+
+.hero__actions .btn {
+  padding: 1rem 1.75rem;
+  font-size: 1.0625rem;
+}
+
+@media (min-width: 1000px) {
+  .hero__grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  }
+
+  .hero__art {
+    display: block;
+  }
+
+  .hero__art svg {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    margin-inline: auto;
+    overflow: visible;
+  }
+}
+
+/* Ilustración "landing zone": todo el color sale de los tokens del tema */
+.art-stop--a {
+  stop-color: var(--color-primary);
+}
+
+.art-stop--b {
+  stop-color: var(--color-accent);
+}
+
+.art-org {
+  fill: color-mix(in srgb, var(--color-surface) 55%, transparent);
+  stroke: var(--color-border-strong);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 7;
+}
+
+.art-box {
+  fill: var(--color-surface);
+  stroke: var(--color-border-strong);
+  stroke-width: 1.5;
+}
+
+.art-bar {
+  fill: var(--color-border-strong);
+}
+
+.art-chip {
+  fill: color-mix(in srgb, var(--color-primary) 14%, var(--color-surface));
+  stroke: color-mix(in srgb, var(--color-primary) 40%, transparent);
+  stroke-width: 1.5;
+}
+
+.art-links path,
+.art-flow path {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.art-links path {
+  stroke: var(--color-border-strong);
+  stroke-width: 2;
+}
+
+.art-flow path {
+  stroke: url(#art-grad);
+  stroke-width: 2.5;
+  stroke-dasharray: 4 12;
+  animation: art-flow 12s linear infinite;
+}
+
+@keyframes art-flow {
+  to {
+    stroke-dashoffset: -112;
+  }
+}
+
+.art-node {
+  fill: var(--color-surface);
+  stroke: var(--color-primary);
+  stroke-width: 2.5;
+}
+
+.art-hub-ring {
+  fill: none;
+  stroke: url(#art-grad);
+  stroke-width: 1.5;
+  opacity: 0.45;
+}
+
+.art-hub {
+  fill: var(--color-surface);
+  stroke: url(#art-grad);
+  stroke-width: 2.5;
+}
+
+.art-shield {
+  fill: color-mix(in srgb, var(--color-primary) 16%, transparent);
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.art-shield-check {
+  fill: none;
+  stroke: var(--color-cyan);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* ============================================================
@@ -1265,118 +1397,124 @@ main {
   margin-bottom: 1.8rem;
 }
 
-/* Agents pipeline diagram */
-.vibe-pipeline {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  gap: 0.6rem;
-  margin: 0 auto var(--space-xl, 2.5rem);
-  padding: 1.5rem 1rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
+/* Flujo de agentes: lista ordenada, un solo recorrido */
+.vibe-flow {
+  list-style: none;
+  margin: 0 0 var(--space-xl);
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg);
 }
 
-.pipeline-node {
+.vibe-flow > li {
+  position: relative;
+}
+
+/* Conector entre elementos: flecha en el hueco (decorativa) */
+.vibe-flow > li + li::before {
+  content: "↓";
+  content: "↓" / "";
+  position: absolute;
+  top: calc(var(--space-lg) / -2);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--color-text-subtle);
+  pointer-events: none;
+}
+
+.vibe-flow__step {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  text-align: center;
-  padding: 0.9rem 1.1rem;
-  border-radius: 12px;
-  min-width: 9.5rem;
-}
-
-.pipeline-node--endpoint {
+  gap: var(--space-2xs);
+  padding: var(--space-lg);
   background: var(--color-surface);
-  border: 1px solid var(--color-border-strong);
-  color: var(--color-text);
-  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--card-inset), var(--shadow-sm);
 }
 
-.pipeline-node--endpoint svg {
-  color: var(--color-primary);
+.vibe-flow__num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
 }
 
-.pipeline-node--deploy svg {
-  color: var(--color-cyan, var(--color-primary));
-}
-
-.pipeline-node__label {
-  font-weight: 650;
+.vibe-flow__agent {
+  align-self: flex-start;
+  font-family: var(--font-mono);
   font-size: 0.9rem;
-}
-
-.pipeline-node--agent {
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--color-primary) 12%, var(--color-surface)),
-    color-mix(in srgb, var(--color-accent) 12%, var(--color-surface))
-  );
-  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
-}
-
-.pipeline-node__step {
-  font-variant-numeric: tabular-nums;
   font-weight: 700;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  color: var(--color-text-subtle);
-}
-
-.pipeline-node__agent {
-  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
-  font-weight: 700;
-  font-size: 0.9rem;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary),
-    var(--color-accent)
-  );
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.pipeline-node__role {
-  font-size: 0.78rem;
-  color: var(--color-text-muted);
-  line-height: 1.35;
-  max-width: 11rem;
+.vibe-flow__name {
+  margin-top: var(--space-2xs);
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.3;
+  color: var(--color-text);
 }
 
-.pipeline-arrow {
+.vibe-flow__desc {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.vibe-flow__end {
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
-  color: var(--color-text-subtle);
-  user-select: none;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--color-surface) 60%, transparent);
+  color: var(--color-text);
+  font-weight: 650;
 }
 
-@media (max-width: 820px) {
-  .vibe-pipeline {
-    flex-direction: column;
+.vibe-flow__end svg {
+  color: var(--color-primary);
+}
+
+.vibe-flow__end--deploy svg {
+  color: var(--color-cyan);
+}
+
+/* Escritorio: Prompt → 3 agentes → Despliegue en una sola fila */
+@media (min-width: 1000px) {
+  .vibe-flow {
+    grid-template-columns: auto repeat(3, minmax(0, 1fr)) auto;
     align-items: stretch;
   }
 
-  .pipeline-node {
-    min-width: 0;
-    width: 100%;
+  .vibe-flow > li + li::before {
+    content: "→";
+    content: "→" / "";
+    top: 50%;
+    left: calc(var(--space-lg) / -2);
   }
 
-  .pipeline-arrow {
-    justify-content: center;
-    transform: rotate(90deg);
+  .vibe-flow__end {
+    flex-direction: column;
+    padding-inline: var(--space-lg);
   }
 }
 
 .vibe__layout {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1fr 1.35fr;
   gap: var(--space-xl, 2.5rem);
   align-items: start;
   margin-top: var(--space-xl, 2.5rem);
@@ -1395,73 +1533,6 @@ main {
   font-size: 0.95rem;
 }
 
-/* Workflow steps */
-.vibe__steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.vibe-step {
-  display: flex;
-  gap: 1rem;
-  padding: 1.1rem 1.2rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 14px;
-  transition:
-    border-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.vibe-step:hover {
-  border-color: var(--color-border-strong);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px -16px rgba(0, 0, 0, 0.45);
-}
-
-.vibe-step__num {
-  flex-shrink: 0;
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-  font-size: 1.05rem;
-  line-height: 1;
-  padding-top: 0.15rem;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary),
-    var(--color-accent)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.vibe-step__name {
-  margin: 0 0 0.3rem;
-  font-size: 1rem;
-  font-weight: 650;
-  color: var(--color-text);
-}
-
-.vibe-step__desc {
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-
-/* Side column */
-.vibe__side {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
 .vibe-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -1478,14 +1549,21 @@ main {
   gap: 0.5rem;
 }
 
-/* Prompt block */
+/* Prompt real: bloque de terminal (isla de contraste en ambos temas) */
 .vibe-prompt {
   margin: 0;
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-primary);
-  border-radius: 14px;
-  padding: 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+  color: #c9d1d9;
+}
+
+:root[data-theme="dark"] .vibe-prompt {
+  background: #06080d;
+  border-color: var(--color-border-strong);
 }
 
 .vibe-prompt__title {
@@ -1494,44 +1572,56 @@ main {
   gap: 0.5rem;
   font-weight: 700;
   font-size: 0.95rem;
-  color: var(--color-text);
+  color: #e6edf3;
   margin-bottom: 0.4rem;
 }
 
 .vibe-prompt__title svg {
-  color: var(--color-primary);
+  color: #7ee787;
 }
 
 .vibe-prompt__hint {
-  margin: 0 0 0.6rem;
+  margin: 0 0 var(--space-md);
   font-size: 0.85rem;
-  color: var(--color-text-subtle);
+  color: #9aa4b2;
 }
 
 .vibe-prompt__text {
   margin: 0;
   padding: 0;
-  font-style: italic;
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-  line-height: 1.65;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.75;
+  color: #c9d1d9;
+}
+
+.vibe-prompt__text::before {
+  content: "$ ";
+  color: #7ee787;
 }
 
 .vibe-prompt__link {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   gap: 0.4rem;
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: var(--space-md);
   font-weight: 650;
   font-size: 0.9rem;
-  color: var(--color-primary);
+  color: #79c0ff;
   text-decoration: none;
   transition: gap 0.2s ease, color 0.2s ease;
 }
 
 .vibe-prompt__link:hover {
-  color: var(--color-primary-hover);
+  color: #a5d6ff;
   gap: 0.6rem;
+}
+
+.vibe-prompt__link:focus-visible {
+  outline-color: #79c0ff;
 }
 
 .vibe-prompt__link svg {

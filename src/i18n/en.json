@@ -266,7 +266,7 @@
     ],
     "promptTitle": "The real prompt",
     "promptIntro": "This is, in essence, the request that gave birth to the website:",
-    "promptText": "\"I want to create my personal website with Astro to gain visibility for a future job. On design, make it attractive, professional and IT-focused, pleasant to look at and easy to read. It should be available in Catalan, English and Spanish, with buttons to my LinkedIn and GitHub, and a toggle between light and dark mode.\"",
+    "promptText": "\"I want to create my personal website with Astro to gain more visibility and have a space where I can explain my current career path. On design, make it attractive, professional and IT-focused, pleasant to look at and easy to read. It should be available in Catalan, English and Spanish, with buttons to my LinkedIn and GitHub, and a toggle between light and dark mode.\"",
     "howTo": "How was this made?",
     "projectsTitle": "Other vibe-coded projects",
     "projectsIntro": "Other projects on my GitHub built with this same approach:",
