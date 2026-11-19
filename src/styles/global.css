@@ -83,7 +83,7 @@
     #6d3aed 55%,
     #0e8a99 100%
   );
-  --gradient-text: linear-gradient(120deg, #2250d8 0%, #7c3aed 60%, #0e8a99 100%);
+  --gradient-text: linear-gradient(120deg, #2250d8 0%, #7c3aed 60%, #0e7490 100%);
 
   --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06),
     0 1px 3px rgba(16, 24, 40, 0.08);

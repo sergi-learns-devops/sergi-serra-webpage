@@ -20,7 +20,7 @@ const translations: Record<Lang, UIStrings> = { es, ca, en };
 
 /**
  * Obtiene el código de idioma a partir de la URL de Astro.
- * Rutas: `/` (ca), `/en`, `/es`.
+ * Rutas: `/` (es, por defecto), `/ca/`, `/en/`.
  */
 export function getLangFromUrl(url: URL): Lang {
   const [, segment] = url.pathname.split('/');
@@ -35,10 +35,13 @@ export function useTranslations(lang: Lang): UIStrings {
 
 /**
  * Construye una ruta con el prefijo de idioma correcto.
- * El idioma por defecto (ca) no lleva prefijo (prefixDefaultLocale: false).
+ * El idioma por defecto (es) no lleva prefijo (prefixDefaultLocale: false).
+ * Los idiomas con prefijo terminan en `/` (`/ca/`, `/en/`): es la URL final
+ * que sirve Cloudflare Pages y la que lista el sitemap, así que canonical,
+ * hreflang y enlaces internos evitan la redirección 308 de `/ca` a `/ca/`.
  */
 export function localizedPath(lang: Lang, path = ''): string {
   const clean = path.replace(/^\//, '');
   if (lang === defaultLang) return `/${clean}`;
-  return `/${lang}/${clean}`.replace(/\/$/, '') || `/${lang}`;
+  return `/${lang}/${clean}`;
 }

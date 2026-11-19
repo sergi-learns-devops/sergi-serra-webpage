@@ -178,10 +178,12 @@ const personSchema = {
             <!-- Selector de idioma -->
             <div class="lang-switcher">
               <label class="sr-only" for="lang-select">{t.language.label}</label>
+              <span id="lang-hint" class="sr-only">{t.language.hint}</span>
               <select
                 id="lang-select"
                 class="lang-switcher__select"
                 aria-label={t.language.label}
+                aria-describedby="lang-hint"
               >
                 {
                   langOptions.map((opt) => (
@@ -325,14 +327,62 @@ const personSchema = {
         }
       });
 
-      // Selector de idioma: navega a la ruta equivalente.
+      // Selector de idioma. Con ratón o con el selector táctil se navega al
+      // elegir. Con teclado, las flechas (y la escritura rápida) solo cambian
+      // la opción resaltada y se navega al pulsar Intro, para no cambiar de
+      // página sin que el usuario lo haya pedido (WCAG 3.2.2).
       const langSelect = document.getElementById(
         "lang-select"
       ) as HTMLSelectElement | null;
-      langSelect?.addEventListener("change", () => {
-        const href = langSelect.value;
-        if (href) window.location.href = href;
-      });
+      if (langSelect) {
+        let baseline = langSelect.value; // opción activa al enfocar
+        let browsedWithKeys = false;
+        let enterPressed = false;
+        const browseKeys = new Set([
+          "ArrowUp",
+          "ArrowDown",
+          "ArrowLeft",
+          "ArrowRight",
+          "Home",
+          "End",
+          "PageUp",
+          "PageDown",
+        ]);
+        const go = () => {
+          const href = langSelect.value;
+          if (href && href !== baseline) window.location.href = href;
+        };
+        langSelect.addEventListener("focus", () => {
+          baseline = langSelect.value;
+        });
+        langSelect.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {
+            enterPressed = true;
+            go();
+          } else if (e.key === " " || e.key === "F4" || e.altKey) {
+            // Abrir el desplegable: la elección posterior es explícita.
+            browsedWithKeys = false;
+          } else if (
+            browseKeys.has(e.key) ||
+            (e.key.length === 1 && !e.ctrlKey && !e.metaKey)
+          ) {
+            browsedWithKeys = true;
+          }
+        });
+        langSelect.addEventListener("keyup", (e) => {
+          if (e.key === "Enter") enterPressed = false;
+        });
+        langSelect.addEventListener("pointerdown", () => {
+          browsedWithKeys = false;
+        });
+        langSelect.addEventListener("blur", () => {
+          browsedWithKeys = false;
+          enterPressed = false;
+        });
+        langSelect.addEventListener("change", () => {
+          if (!browsedWithKeys || enterPressed) go();
+        });
+      }
 
       // Animaciones de entrada y scroll-spy (respetando reduced-motion).
       const prefersReducedMotion = window.matchMedia(

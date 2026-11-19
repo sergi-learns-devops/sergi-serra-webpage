@@ -26,6 +26,7 @@
   },
   "language": {
     "label": "Seleccionar idioma",
+    "hint": "Usa las flechas para elegir y pulsa Intro para cambiar de idioma.",
     "ca": "Català",
     "en": "English",
     "es": "Español"

@@ -38,6 +38,7 @@ const ui = Object.fromEntries(
         },
         theme: tr.theme.toggle,
         language: tr.language.label,
+        languageHint: tr.language.hint,
         footer: tr.footer,
       },
     ];
@@ -121,6 +122,9 @@ const paths = Object.fromEntries(
           langSelect.setAttribute("aria-label", tr.language);
           langSelect.value = homeHref;
         }
+
+        var langHint = document.getElementById("lang-hint");
+        if (langHint) langHint.textContent = tr.languageHint;
 
         var footer = document.querySelector(".site-footer__inner > p");
         if (footer) {

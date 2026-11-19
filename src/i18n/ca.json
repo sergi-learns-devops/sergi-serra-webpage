@@ -26,6 +26,7 @@
   },
   "language": {
     "label": "Selecciona l'idioma",
+    "hint": "Fes servir les fletxes per triar i prem Intro per canviar d'idioma.",
     "ca": "Català",
     "en": "English",
     "es": "Castellà"
