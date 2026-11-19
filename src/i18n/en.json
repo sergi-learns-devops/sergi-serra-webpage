@@ -237,7 +237,6 @@
     "workflowTitle": "Real workflow & stack",
     "workflowIntro": "The workflow I used to ship this very website:",
     "diagramStart": "Prompt",
-    "diagramEnd": "Deployment",
     "steps": [
       {
         "agent": "fullstack-developer",
@@ -253,6 +252,11 @@
         "agent": "qa-agent",
         "name": "Verification & human control",
         "description": "Clean build (Astro), automated visual testing with Playwright and an accessibility review (AA contrast, semantic HTML). The final decision and validation are human."
+      },
+      {
+        "agent": "cloudflare-pages",
+        "name": "Continuous deployment on Cloudflare Pages",
+        "description": "Every push to GitHub builds and publishes the site automatically on Cloudflare Pages, served from its global network with my own domain sserra.dev, enforced HTTPS and security headers defined in the repository itself."
       }
     ],
     "stackTitle": "Technical stack",
@@ -262,7 +266,8 @@
       "Astro native i18n",
       "CSS (theme variables)",
       "AI agents (CLI)",
-      "Playwright (QA)"
+      "Playwright (QA)",
+      "Cloudflare Pages"
     ],
     "promptTitle": "The real prompt",
     "promptIntro": "This is, in essence, the request that gave birth to the website:",

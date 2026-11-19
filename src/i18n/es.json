@@ -237,7 +237,6 @@
     "workflowTitle": "Workflow y stack real",
     "workflowIntro": "Flujo de trabajo que utilicé para desplegar esta misma web:",
     "diagramStart": "Prompt",
-    "diagramEnd": "Despliegue",
     "steps": [
       {
         "agent": "fullstack-developer",
@@ -253,6 +252,11 @@
         "agent": "qa-agent",
         "name": "Verificación y control humano",
         "description": "Build limpio (Astro), pruebas visuales automatizadas con Playwright y revisión de accesibilidad (contraste AA, HTML semántico). La decisión y la validación finales son humanas."
+      },
+      {
+        "agent": "cloudflare-pages",
+        "name": "Despliegue continuo en Cloudflare Pages",
+        "description": "Cada push a GitHub construye y publica la web de forma automática en Cloudflare Pages, servida desde su red global con mi dominio sserra.dev, HTTPS forzado y cabeceras de seguridad definidas en el propio repositorio."
       }
     ],
     "stackTitle": "Stack técnico",
@@ -262,7 +266,8 @@
       "i18n nativo de Astro",
       "CSS (variables de tema)",
       "Agentes de IA (CLI)",
-      "Playwright (QA)"
+      "Playwright (QA)",
+      "Cloudflare Pages"
     ],
     "promptTitle": "El prompt real",
     "promptIntro": "Esta es, en esencia, la petición con la que nació la web:",

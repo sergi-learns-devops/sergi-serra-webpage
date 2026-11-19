@@ -237,7 +237,6 @@
     "workflowTitle": "Workflow i stack real",
     "workflowIntro": "Flux de treball que vaig fer servir per desplegar aquesta mateixa web:",
     "diagramStart": "Prompt",
-    "diagramEnd": "Desplegament",
     "steps": [
       {
         "agent": "fullstack-developer",
@@ -253,6 +252,11 @@
         "agent": "qa-agent",
         "name": "Verificació i control humà",
         "description": "Build net (Astro), proves visuals automatitzades amb Playwright i revisió d'accessibilitat (contrast AA, HTML semàntic). La decisió i la validació finals són humanes."
+      },
+      {
+        "agent": "cloudflare-pages",
+        "name": "Desplegament continu a Cloudflare Pages",
+        "description": "Cada push a GitHub construeix i publica la web de manera automàtica a Cloudflare Pages, servida des de la seva xarxa global amb el meu domini sserra.dev, HTTPS forçat i capçaleres de seguretat definides al mateix repositori."
       }
     ],
     "stackTitle": "Stack tècnic",
@@ -262,7 +266,8 @@
       "i18n natiu d'Astro",
       "CSS (variables de tema)",
       "Agents d'IA (CLI)",
-      "Playwright (QA)"
+      "Playwright (QA)",
+      "Cloudflare Pages"
     ],
     "promptTitle": "El prompt real",
     "promptIntro": "Aquesta és, en essència, la petició amb què va néixer la web:",

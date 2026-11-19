@@ -1587,14 +1587,10 @@ main {
   color: var(--color-primary);
 }
 
-.vibe-flow__end--deploy svg {
-  color: var(--color-cyan);
-}
-
-/* Escritorio: Prompt → 3 agentes → Despliegue en una sola fila */
-@media (min-width: 1000px) {
+/* Escritorio: Prompt → 4 pasos en una sola fila (por debajo, en vertical) */
+@media (min-width: 1100px) {
   .vibe-flow {
-    grid-template-columns: auto repeat(3, minmax(0, 1fr)) auto;
+    grid-template-columns: auto repeat(4, minmax(0, 1fr));
     align-items: stretch;
   }
 
