@@ -1736,7 +1736,7 @@ main {
 
 .certs__cta {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: var(--space-md);
 }
 
