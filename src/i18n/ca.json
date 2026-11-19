@@ -101,50 +101,70 @@
     "levelAssociate": "Associate",
     "levelProfessional": "Professional",
     "issuer": "Google Cloud",
+    "issuedLabel": "Obtinguda",
+
     "renewedLabel": "Renovada",
     "expiredLabel": "Caducada",
     "items": [
       {
         "name": "Associate Cloud Engineer",
+
+        "issued": "2022",
         "level": "Associate",
-        "image": "/badges/associate_cloud_engineer.webp"
+        "image": "/badges/associate_cloud_engineer.webp",
+
+        "renewed": "2025"
       },
       {
         "name": "Professional Cloud Architect",
+
+        "issued": "2022",
         "level": "Professional",
         "image": "/badges/professional_cloud_architect.webp",
         "renewed": "2026"
       },
       {
         "name": "Professional Cloud Network Engineer",
+
+        "issued": "2024",
         "level": "Professional",
         "image": "/badges/professional_network_engineer.webp",
         "renewed": "2026"
       },
       {
         "name": "Professional Cloud DevOps Engineer",
+
+        "issued": "2024",
         "level": "Professional",
         "image": "/badges/professional_devops_engineer.webp",
         "renewed": "2026"
       },
       {
         "name": "Professional Cloud Developer",
+
+        "issued": "2024",
         "level": "Professional",
         "image": "/badges/professional_cloud_developer.webp",
         "renewed": "2026"
       },
       {
         "name": "Professional Cloud Security Engineer",
+
+        "issued": "2025",
         "level": "Professional",
         "image": "/badges/professional_security_engineer.webp"
       },
       {
         "name": "Professional Cloud Database Engineer",
+
+        "issued": "2025",
         "level": "Professional",
         "image": "/badges/professional_database_engineer.webp"
       },
       {
         "name": "HashiCorp Certified: Terraform Associate (003)",
+
+        "issued": "2023",
         "level": "Associate",
         "image": "/badges/terraform_associate.webp",
         "issuer": "HashiCorp",

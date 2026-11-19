@@ -1586,7 +1586,7 @@ ul {
   line-height: 1.35;
 }
 
-/* Marcas (renovada / caducada) */
+/* Marca flotante sobre el badge (caducada) */
 .cert-badge__mark {
   position: absolute;
   bottom: 0.1rem;
@@ -1601,16 +1601,21 @@ ul {
   box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
 }
 
-.cert-badge__mark--renewed {
-  color: #0b5d1e;
-  background: #d6f5df;
-  border: 1px solid #a7e6b8;
+/* Línea de metadatos: año de obtención y, si procede, de renovación */
+.cert-badge__meta {
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
 }
 
-:root[data-theme="dark"] .cert-badge__mark--renewed {
+.cert-badge__renewed {
+  font-weight: 650;
+  color: #0b5d1e;
+}
+
+:root[data-theme="dark"] .cert-badge__renewed {
   color: #7ee29a;
-  background: color-mix(in srgb, #1a7a35 35%, var(--color-surface));
-  border-color: color-mix(in srgb, #7ee29a 40%, transparent);
 }
 
 .cert-badge__mark--expired {
