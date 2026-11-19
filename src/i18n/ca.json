@@ -295,6 +295,7 @@
   },
   "footer": {
     "rights": "Tots els drets reservats.",
-    "builtWith": "Fet amb Astro."
+    "builtWith": "Fet amb Astro.",
+    "source": "Codi font"
   }
 }

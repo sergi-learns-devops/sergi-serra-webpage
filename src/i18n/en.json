@@ -295,6 +295,7 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "builtWith": "Built with Astro."
+    "builtWith": "Built with Astro.",
+    "source": "Source code"
   }
 }

@@ -7,32 +7,22 @@ interface Props {
 }
 
 const { t } = Astro.props;
+// El texto visible del correo se escribe con &#64; para que no coincida con el
+// patrón de ofuscación automática de Cloudflare (que lo sustituiría por "[email protected]").
+const [emailUser, emailDomain] = siteConfig.email.split("@");
 ---
 
 <section id="contact" class="section" aria-labelledby="contact-title">
   <div class="container" data-reveal>
     <h2 id="contact-title" class="section__title">{t.contact.title}</h2>
     <p class="section__intro">{t.contact.intro}</p>
-    <div class="contact__links">
-      <a class="contact-card" href={`mailto:${siteConfig.email}`}>
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
+    <div class="contact__panel">
+      <p class="contact__label">{t.contact.emailLabel}</p>
+      <div class="contact__email-row">
+        <a class="contact__email" href={`mailto:${siteConfig.email}`}
+          >{emailUser}&#64;{emailDomain}</a
         >
-          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-          <path d="m22 7-10 6L2 7"></path>
-        </svg>
-        <span>{t.contact.emailLabel}</span>
-      </a>
-
-      <button
+        <button
         type="button"
         class="contact-card contact-card--copy"
         id="copy-email"
@@ -73,7 +63,9 @@ const { t } = Astro.props;
         </svg>
         <span class="contact-card__copy-label">{t.contact.copyEmail}</span>
       </button>
+      </div>
 
+      <div class="contact__links">
       <a
         class="contact-card"
         href={siteConfig.linkedin}
@@ -113,6 +105,7 @@ const { t } = Astro.props;
         </svg>
         <span>{t.contact.githubLabel}</span>
       </a>
+      </div>
     </div>
   </div>
 </section>

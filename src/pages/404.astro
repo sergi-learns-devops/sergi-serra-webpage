@@ -137,6 +137,9 @@ const paths = Object.fromEntries(
             tr.footer.builtWith;
         }
 
+        var source = document.querySelector(".site-footer__source");
+        if (source) source.textContent = tr.footer.source;
+
         var title = document.querySelector(".not-found__title");
         if (title) title.textContent = tr.notFound.title;
 
