@@ -85,6 +85,23 @@
   );
   --gradient-text: linear-gradient(120deg, #2250d8 0%, #7c3aed 60%, #0e7490 100%);
 
+  /* Botón primario: texto blanco >= 5,3:1 en todo el degradado */
+  --gradient-btn: linear-gradient(
+    135deg,
+    #1f47c4 0%,
+    #5b34d6 55%,
+    #0b7683 100%
+  );
+  --color-on-brand: #ffffff;
+
+  /* Etiquetas neutras (contenido no interactivo) */
+  --chip-bg: #eef1f7;
+  --chip-text: #39445a;
+  --chip-border: #d5dbe8;
+
+  /* Relieve interior de las tarjetas (solo visible en oscuro) */
+  --card-inset: 0 0 0 0 transparent;
+
   --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06),
     0 1px 3px rgba(16, 24, 40, 0.08);
   --shadow: 0 4px 12px rgba(16, 24, 40, 0.08),
@@ -96,8 +113,8 @@
 
 :root[data-theme="dark"] {
   --color-bg: #0b0e14;
-  --color-bg-alt: #10141c;
-  --color-surface: #141924;
+  --color-bg-alt: #0f1521;
+  --color-surface: #151b28;
   --color-surface-2: #1a2130;
   --color-border: #28303f;
   --color-border-strong: #3a455a;
@@ -127,6 +144,16 @@
     #c4a6ff 55%,
     #5fe0ea 100%
   );
+
+  /* Degradado pastel: el texto del botón pasa a oscuro (7,7 a 11:1) */
+  --gradient-btn: var(--gradient-brand);
+  --color-on-brand: #0b0e14;
+
+  --chip-bg: #1a2130;
+  --chip-text: #c3cbdb;
+  --chip-border: #2c3548;
+
+  --card-inset: inset 0 1px 0 rgb(255 255 255 / 0.05);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
   --shadow: 0 6px 18px rgba(0, 0, 0, 0.45), 0 16px 40px rgba(0, 0, 0, 0.5);
@@ -223,7 +250,6 @@ ul {
    combinando outline + halo para máxima visibilidad en ambos temas. */
 .btn:focus-visible,
 .contact-card:focus-visible,
-.project-card__link:focus-visible,
 .site-nav__link:focus-visible,
 .theme-toggle:focus-visible,
 .lang-switcher__select:focus-visible,
@@ -249,9 +275,14 @@ ul {
   padding-inline: var(--space-lg);
 }
 
+main {
+  counter-reset: section;
+}
+
 .section {
-  padding-block: var(--space-3xl);
+  padding-block: clamp(3rem, 8vw, var(--space-3xl));
   position: relative;
+  counter-increment: section;
 }
 
 .section--alt {
@@ -266,14 +297,18 @@ ul {
   display: inline-block;
 }
 
-.section__title::after {
-  content: "";
+/* Número de sección en mono (01 / 02 …), generado por CSS */
+.section__title::before {
+  content: counter(section, decimal-leading-zero) " /";
+  content: counter(section, decimal-leading-zero) " /" / "";
   display: block;
-  width: 3rem;
-  height: 4px;
-  margin-top: var(--space-sm);
-  border-radius: var(--radius-pill);
-  background: var(--gradient-brand);
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
 }
 
 .section__intro {
@@ -333,8 +368,8 @@ ul {
 }
 
 .btn--primary {
-  background: var(--gradient-brand);
-  color: #ffffff;
+  background: var(--gradient-btn);
+  color: var(--color-on-brand);
   box-shadow: var(--shadow-sm);
 }
 
@@ -464,6 +499,14 @@ ul {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* Sin JavaScript no hay observador que revele las secciones: se muestran ya. */
+@media (scripting: none) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -788,7 +831,7 @@ ul {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: var(--space-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--card-inset), var(--shadow-sm);
   overflow: hidden;
   transition: transform var(--transition), border-color var(--transition),
     box-shadow var(--transition);
@@ -809,7 +852,7 @@ ul {
 .skill-card:hover {
   transform: translateY(-4px);
   border-color: var(--color-border-strong);
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-inset), var(--shadow);
 }
 
 .skill-card:hover::before {
@@ -829,14 +872,21 @@ ul {
 
 .tag {
   display: inline-block;
-  background: var(--color-tag-bg);
-  color: var(--color-tag-text);
-  border: 1px solid var(--color-tag-border);
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
   font-size: 0.85rem;
   font-weight: 500;
   padding: 0.3rem 0.7rem;
   border-radius: var(--radius-pill);
   transition: transform var(--transition);
+}
+
+/* En Habilidades las etiquetas conservan el tono de marca */
+.skill-card .tag {
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  border-color: var(--color-tag-border);
 }
 
 .skill-card:hover .tag {
@@ -883,8 +933,39 @@ ul {
    ============================================================ */
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
+  counter-reset: project;
+}
+
+/* Tablet: 2 columnas; la quinta tarjeta ocupa todo el ancho. */
+@media (min-width: 640px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Escritorio: fila 1 = 2 + 4 columnas, fila 2 = 2 + 2 + 2. */
+@media (min-width: 1000px) {
+  .projects__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .project-card {
+    grid-column: span 2;
+  }
+
+  .project-card:nth-child(2) {
+    grid-column: span 4;
+  }
+
+  .project-card:nth-child(5) {
+    grid-column: span 2;
+  }
 }
 
 .project-card {
@@ -895,10 +976,24 @@ ul {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: var(--space-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--card-inset), var(--shadow-sm);
   overflow: hidden;
+  counter-increment: project;
   transition: transform var(--transition), box-shadow var(--transition),
     border-color var(--transition);
+}
+
+/* Índice en mono (01, 02 …), generado por CSS */
+.project-card::before {
+  content: counter(project, decimal-leading-zero);
+  content: counter(project, decimal-leading-zero) / "";
+  margin-bottom: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
 }
 
 .project-card::after {
@@ -933,37 +1028,17 @@ ul {
 
 .project-card__desc {
   color: var(--color-text-muted);
-  margin-bottom: var(--space-md);
-  flex-grow: 1;
+  margin-bottom: var(--space-lg);
 }
 
+/* Etiquetas ancladas al pie de la tarjeta, separadas por una línea */
 .project-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
-  margin-bottom: var(--space-lg);
-}
-
-.project-card__link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2xs);
-  font-weight: 600;
-  align-self: flex-start;
-}
-
-.project-card__link::after {
-  content: "→";
-  transition: transform var(--transition);
-}
-
-.project-card__link:hover {
-  text-decoration: none;
-}
-
-.project-card__link:hover::after {
-  transform: translateX(4px);
+  margin-top: auto;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
 }
 
 /* ============================================================
@@ -1095,27 +1170,27 @@ ul {
 }
 
 @media (max-width: 820px) {
-  .section {
-    padding-block: var(--space-2xl);
-  }
-
   .about__grid {
     grid-template-columns: 1fr;
   }
 
   /* En lugar de ocultar la navegación (y perder el acceso a las secciones),
      la convertimos en una fila desplazable horizontalmente, legible y
-     accesible por teclado. */
+     accesible por teclado. Fila 1: marca completa + controles. Fila 2: nav. */
   .site-header__inner {
+    position: relative;
     flex-wrap: wrap;
-    row-gap: var(--space-xs);
+    row-gap: var(--space-2xs);
+  }
+
+  .site-header__brand {
+    line-height: 2.5rem;
   }
 
   .site-nav {
     order: 3;
     width: 100%;
     gap: var(--space-sm);
-    justify-content: space-between;
   }
 
   .site-nav__list {
@@ -1125,6 +1200,9 @@ ul {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding-bottom: 2px;
+    /* Difuminado en el borde derecho: indica que la fila se desplaza */
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 1.5rem), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 1.5rem), transparent);
   }
 
   .site-nav__list::-webkit-scrollbar {
@@ -1139,8 +1217,11 @@ ul {
     display: none;
   }
 
+  /* Los controles salen del flujo de la nav y se anclan arriba a la derecha */
   .header__controls {
-    flex-shrink: 0;
+    position: absolute;
+    top: var(--space-xs);
+    right: var(--space-lg);
   }
 }
 
@@ -1149,8 +1230,8 @@ ul {
     padding-inline: var(--space-md);
   }
 
-  .site-header__brand span {
-    display: none;
+  .header__controls {
+    right: var(--space-md);
   }
 
   .hero__actions {
@@ -1193,7 +1274,7 @@ ul {
   gap: 0.6rem;
   margin: 0 auto var(--space-xl, 2.5rem);
   padding: 1.5rem 1rem;
-  background: var(--color-surface-2);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 16px;
 }
@@ -1544,12 +1625,19 @@ ul {
    ============================================================ */
 .certs__badges {
   list-style: none;
-  margin: 0 0 var(--space-lg);
+  margin: 0 0 var(--space-xl);
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
-  gap: var(--space-lg);
+  /* 8 certificaciones: 2 x 4 en móvil, 4 x 2 desde tablet (sin huérfanos) */
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl) var(--space-lg);
   justify-items: center;
+}
+
+@media (min-width: 720px) {
+  .certs__badges {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .cert-badge {
@@ -1584,6 +1672,7 @@ ul {
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.35;
+  min-height: 2.7em; /* reserva 2 líneas para alinear los años entre columnas */
 }
 
 /* Marca flotante sobre el badge (caducada) */
@@ -1603,6 +1692,11 @@ ul {
 
 /* Línea de metadatos: año de obtención y, si procede, de renovación */
 .cert-badge__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  margin-top: -0.35rem;
   font-size: 0.78rem;
   line-height: 1.35;
   color: var(--color-text-muted);
@@ -1642,16 +1736,11 @@ ul {
 
 .certs__cta {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: var(--space-md);
 }
 
 @media (max-width: 560px) {
-  .certs__badges {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
-  }
-
   .cert-badge__img {
     width: 7rem;
     height: 7rem;

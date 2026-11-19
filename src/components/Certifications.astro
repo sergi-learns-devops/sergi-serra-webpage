@@ -37,14 +37,13 @@ const { t } = Astro.props;
             <span class="cert-badge__name">{cert.name}</span>
             {cert.issued && (
               <span class="cert-badge__meta">
-                {t.certs.issuedLabel} {cert.issued}
+                <span>
+                  {t.certs.issuedLabel} {cert.issued}
+                </span>
                 {cert.renewed && (
-                  <>
-                    {" · "}
-                    <span class="cert-badge__renewed">
-                      {t.certs.renewedLabel} {cert.renewed}
-                    </span>
-                  </>
+                  <span class="cert-badge__renewed">
+                    {t.certs.renewedLabel} {cert.renewed}
+                  </span>
                 )}
               </span>
             )}
