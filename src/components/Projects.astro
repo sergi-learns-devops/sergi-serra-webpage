@@ -6,26 +6,85 @@ interface Props {
 }
 
 const { t } = Astro.props;
+const own = t.projects.own;
 ---
 
 <section id="projects" class="section" aria-labelledby="projects-title">
   <div class="container" data-reveal>
     <h2 id="projects-title" class="section__title">{t.projects.title}</h2>
-    <p class="section__intro">{t.projects.intro}</p>
-    <div class="projects__grid">
-      {
-        t.projects.items.map((project) => (
-          <article class="project-card">
-            <h3 class="project-card__name">{project.name}</h3>
-            <p class="project-card__desc">{project.description}</p>
-            <ul class="project-card__tags">
-              {project.tags.map((tag) => (
-                <li class="tag">{tag}</li>
-              ))}
-            </ul>
-          </article>
-        ))
-      }
+
+    <!-- Experiencia profesional -->
+    <div class="projects__block">
+      <h3 class="projects__subtitle">{t.projects.workTitle}</h3>
+      <p class="projects__hint">{t.projects.intro}</p>
+      <div class="projects__grid">
+        {
+          t.projects.items.map((project) => (
+            <article class="project-card">
+              <h4 class="project-card__name">{project.name}</h4>
+              <p class="project-card__desc">{project.description}</p>
+              <ul class="project-card__tags">
+                {project.tags.map((tag) => (
+                  <li class="tag">{tag}</li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Proyectos propios: homelab (servicios solo accesibles desde la red interna) -->
+    <div class="projects__block">
+      <h3 class="projects__subtitle">{t.projects.ownTitle}</h3>
+      <p class="projects__hint">{t.projects.ownIntro}</p>
+
+      <article class="own-card">
+        <span class="own-card__scope">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          {own.scope}
+        </span>
+
+        <div>
+          <h4 class="own-card__name">{own.name}</h4>
+          <p class="own-card__desc">{own.description}</p>
+        </div>
+
+        <div class="own-card__groups">
+          {
+            own.groups.map((group) => (
+              <div class="own-card__group">
+                <h5 class="own-card__group-name">{group.name}</h5>
+                <ul class="own-card__list">
+                  {group.items.map((item) => (
+                    <li>
+                      <span class="own-card__item-name">{item.name}</span>
+                      <span class="own-card__item-desc">{item.description}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+        </div>
+
+        <ul class="own-card__tags">
+          {own.tags.map((tag) => <li class="tag">{tag}</li>)}
+        </ul>
+      </article>
     </div>
   </div>
 </section>

@@ -175,6 +175,83 @@
   "projects": {
     "title": "Projects",
     "intro": "A selection of projects I've worked on and led:",
+    "workTitle": "Professional experience",
+    "ownTitle": "Personal projects",
+    "ownIntro": "What I build and maintain on my own:",
+    "own": {
+      "name": "Homelab: self-hosted services",
+      "scope": "Only reachable from my internal network",
+      "description": "Self-hosted services in Docker containers, reachable through my own domain names on sserra.dev, so I do not depend on third-party services.",
+      "groups": [
+        {
+          "name": "Administration & development",
+          "items": [
+            {
+              "name": "Arcane",
+              "description": "container management"
+            },
+            {
+              "name": "Gitea",
+              "description": "private code repositories"
+            },
+            {
+              "name": "Code Server",
+              "description": "editing Docker Compose manifests from anywhere"
+            }
+          ]
+        },
+        {
+          "name": "Monitoring",
+          "items": [
+            {
+              "name": "Grafana",
+              "description": "metrics dashboards"
+            },
+            {
+              "name": "Prometheus",
+              "description": "metrics collection"
+            },
+            {
+              "name": "Node Exporter",
+              "description": "metrics of the server running the services"
+            }
+          ]
+        },
+        {
+          "name": "Network & DNS",
+          "items": [
+            {
+              "name": "Pi-hole and AdGuard Home",
+              "description": "DNS servers with ad and tracker blocking"
+            },
+            {
+              "name": "NGINX",
+              "description": "reverse proxy with my own domain names"
+            }
+          ]
+        },
+        {
+          "name": "Utilities & media",
+          "items": [
+            {
+              "name": "Stirling PDF",
+              "description": "PDF editing tools"
+            },
+            {
+              "name": "Synology NAS and Plex",
+              "description": "access by domain name"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "Docker",
+        "Docker Compose",
+        "NGINX",
+        "DNS",
+        "Self-hosting"
+      ]
+    },
     "items": [
       {
         "name": "Migration of workloads to Google Cloud Platform",

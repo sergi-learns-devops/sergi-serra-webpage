@@ -1175,6 +1175,9 @@ main {
 .project-card__name {
   font-size: 1.25rem;
   font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
   margin-bottom: var(--space-sm);
 }
 
@@ -1191,6 +1194,142 @@ main {
   margin-top: auto;
   padding-top: var(--space-md);
   border-top: 1px solid var(--color-border);
+}
+
+/* Bloques de la sección: experiencia profesional y proyectos propios */
+.projects__block + .projects__block {
+  margin-top: var(--space-2xl);
+}
+
+.section__title + .projects__block {
+  margin-top: var(--space-lg);
+}
+
+.projects__subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2xs);
+  color: var(--color-text);
+}
+
+.projects__hint {
+  margin: 0 0 var(--space-lg);
+  color: var(--color-text-muted);
+}
+
+/* Tarjeta del homelab: ancho completo, servicios agrupados */
+.own-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--card-inset), var(--shadow-sm);
+}
+
+.own-card__scope {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--color-cyan) 40%, transparent);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-cyan) 9%, var(--color-surface));
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.own-card__scope svg {
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.own-card__name {
+  font-size: 1.25rem;
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin-bottom: var(--space-xs);
+}
+
+.own-card__desc {
+  max-width: var(--max-width-prose);
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.own-card__groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 640px) {
+  .own-card__groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .own-card__groups {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.own-card__group-name {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.own-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+}
+
+.own-card__item-name {
+  display: block;
+  font-weight: 650;
+  color: var(--color-text);
+}
+
+.own-card__item-desc {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.own-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: 0;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 560px) {
+  .own-card {
+    padding: var(--space-lg);
+  }
 }
 
 /* ============================================================

@@ -175,6 +175,83 @@
   "projects": {
     "title": "Projectes",
     "intro": "Una selecció de projectes en els què he treballat i liderat:",
+    "workTitle": "Experiència professional",
+    "ownTitle": "Projectes propis",
+    "ownIntro": "El que construeixo i mantinc pel meu compte:",
+    "own": {
+      "name": "Homelab: serveis autoallotjats",
+      "scope": "Accessible només des de la meva xarxa interna",
+      "description": "Serveis autoallotjats en contenidors Docker, accessibles amb noms de domini propis sobre sserra.dev, per no dependre de serveis de tercers.",
+      "groups": [
+        {
+          "name": "Administració i desenvolupament",
+          "items": [
+            {
+              "name": "Arcane",
+              "description": "administració dels contenidors"
+            },
+            {
+              "name": "Gitea",
+              "description": "repositoris de codi privats"
+            },
+            {
+              "name": "Code Server",
+              "description": "edició dels manifests de Docker Compose des de qualsevol lloc"
+            }
+          ]
+        },
+        {
+          "name": "Monitorització",
+          "items": [
+            {
+              "name": "Grafana",
+              "description": "visualització de mètriques"
+            },
+            {
+              "name": "Prometheus",
+              "description": "recollida de mètriques"
+            },
+            {
+              "name": "Node Exporter",
+              "description": "mètriques del servidor on s'executen els serveis"
+            }
+          ]
+        },
+        {
+          "name": "Xarxa i DNS",
+          "items": [
+            {
+              "name": "Pi-hole i AdGuard Home",
+              "description": "servidors DNS i bloqueig d'anuncis i rastrejadors"
+            },
+            {
+              "name": "NGINX",
+              "description": "reverse proxy amb noms de domini propis"
+            }
+          ]
+        },
+        {
+          "name": "Utilitats i multimèdia",
+          "items": [
+            {
+              "name": "Stirling PDF",
+              "description": "eines d'edició de PDF"
+            },
+            {
+              "name": "NAS Synology i Plex",
+              "description": "accés per nom de domini"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "Docker",
+        "Docker Compose",
+        "NGINX",
+        "DNS",
+        "Self-hosting"
+      ]
+    },
     "items": [
       {
         "name": "Migració de workloads a Google Cloud Platform",
