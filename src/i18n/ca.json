@@ -188,15 +188,15 @@
           "items": [
             {
               "name": "Arcane",
-              "description": "administració dels contenidors"
+              "description": "Administració dels contenidors"
             },
             {
               "name": "Gitea",
-              "description": "repositoris de codi privats"
+              "description": "Repositoris de codi privats"
             },
             {
               "name": "Code Server",
-              "description": "edició dels manifests de Docker Compose des de qualsevol lloc"
+              "description": "Edició dels manifests de Docker Compose des de qualsevol lloc"
             }
           ]
         },
@@ -205,15 +205,15 @@
           "items": [
             {
               "name": "Grafana",
-              "description": "visualització de mètriques"
+              "description": "Visualització de mètriques"
             },
             {
               "name": "Prometheus",
-              "description": "recollida de mètriques"
+              "description": "Recollida de mètriques"
             },
             {
               "name": "Node Exporter",
-              "description": "mètriques del servidor on s'executen els serveis"
+              "description": "Mètriques del servidor on s'executen els serveis"
             }
           ]
         },
@@ -222,11 +222,11 @@
           "items": [
             {
               "name": "Pi-hole i AdGuard Home",
-              "description": "servidors DNS i bloqueig d'anuncis i rastrejadors"
+              "description": "Servidors DNS i bloqueig d'anuncis i rastrejadors"
             },
             {
               "name": "NGINX",
-              "description": "reverse proxy amb noms de domini propis"
+              "description": "Reverse proxy amb noms de domini propis"
             }
           ]
         },
@@ -235,11 +235,11 @@
           "items": [
             {
               "name": "Stirling PDF",
-              "description": "eines d'edició de PDF"
+              "description": "Eines d'edició de PDF"
             },
             {
               "name": "NAS Synology i Plex",
-              "description": "accés per nom de domini"
+              "description": "Accés per nom de domini"
             }
           ]
         }
@@ -368,10 +368,6 @@
   "contact": {
     "title": "Contacte",
     "intro": "Estàs buscant algú com jo? M'encantarà parlar amb tu. Pots contactar-me pels següents canals.",
-    "emailLabel": "Correu electrònic",
-    "email": "s.serramarques@gmail.com",
-    "copyEmail": "Copia el correu",
-    "copied": "Copiat!",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub"
   },

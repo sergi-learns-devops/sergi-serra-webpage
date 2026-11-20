@@ -188,15 +188,15 @@
           "items": [
             {
               "name": "Arcane",
-              "description": "administración de los contenedores"
+              "description": "Administración de los contenedores"
             },
             {
               "name": "Gitea",
-              "description": "repositorios de código privados"
+              "description": "Repositorios de código privados"
             },
             {
               "name": "Code Server",
-              "description": "edición de los manifiestos de Docker Compose desde cualquier sitio"
+              "description": "Edición de los manifiestos de Docker Compose desde cualquier sitio"
             }
           ]
         },
@@ -205,15 +205,15 @@
           "items": [
             {
               "name": "Grafana",
-              "description": "visualización de métricas"
+              "description": "Visualización de métricas"
             },
             {
               "name": "Prometheus",
-              "description": "recogida de métricas"
+              "description": "Recogida de métricas"
             },
             {
               "name": "Node Exporter",
-              "description": "métricas del servidor donde se ejecutan los servicios"
+              "description": "Métricas del servidor donde se ejecutan los servicios"
             }
           ]
         },
@@ -222,11 +222,11 @@
           "items": [
             {
               "name": "Pi-hole y AdGuard Home",
-              "description": "servidores DNS y bloqueo de anuncios y rastreadores"
+              "description": "Servidores DNS y bloqueo de anuncios y rastreadores"
             },
             {
               "name": "NGINX",
-              "description": "reverse proxy con nombres de dominio propios"
+              "description": "Reverse proxy con nombres de dominio propios"
             }
           ]
         },
@@ -235,11 +235,11 @@
           "items": [
             {
               "name": "Stirling PDF",
-              "description": "herramientas de edición de PDF"
+              "description": "Herramientas de edición de PDF"
             },
             {
               "name": "NAS Synology y Plex",
-              "description": "acceso por nombre de dominio"
+              "description": "Acceso por nombre de dominio"
             }
           ]
         }
@@ -368,10 +368,6 @@
   "contact": {
     "title": "Contacto",
     "intro": "¿Buscas a alguien como yo? Me encantará hablar contigo. Puedes contactarme por los siguientes canales.",
-    "emailLabel": "Correo electrónico",
-    "email": "s.serramarques@gmail.com",
-    "copyEmail": "Copiar correo",
-    "copied": "¡Copiado!",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub"
   },

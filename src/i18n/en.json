@@ -188,15 +188,15 @@
           "items": [
             {
               "name": "Arcane",
-              "description": "container management"
+              "description": "Container management"
             },
             {
               "name": "Gitea",
-              "description": "private code repositories"
+              "description": "Private code repositories"
             },
             {
               "name": "Code Server",
-              "description": "editing Docker Compose manifests from anywhere"
+              "description": "Editing Docker Compose manifests from anywhere"
             }
           ]
         },
@@ -205,15 +205,15 @@
           "items": [
             {
               "name": "Grafana",
-              "description": "metrics dashboards"
+              "description": "Metrics dashboards"
             },
             {
               "name": "Prometheus",
-              "description": "metrics collection"
+              "description": "Metrics collection"
             },
             {
               "name": "Node Exporter",
-              "description": "metrics of the server running the services"
+              "description": "Metrics of the server running the services"
             }
           ]
         },
@@ -226,7 +226,7 @@
             },
             {
               "name": "NGINX",
-              "description": "reverse proxy with my own domain names"
+              "description": "Reverse proxy with my own domain names"
             }
           ]
         },
@@ -239,7 +239,7 @@
             },
             {
               "name": "Synology NAS and Plex",
-              "description": "access by domain name"
+              "description": "Access by domain name"
             }
           ]
         }
@@ -368,10 +368,6 @@
   "contact": {
     "title": "Contact",
     "intro": "Looking for someone like me? I'd love to talk. You can reach me through the channels below.",
-    "emailLabel": "Email",
-    "email": "s.serramarques@gmail.com",
-    "copyEmail": "Copy email",
-    "copied": "Copied!",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub"
   },
