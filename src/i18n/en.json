@@ -180,8 +180,8 @@
     "ownIntro": "What I build and maintain on my own:",
     "own": {
       "name": "Homelab: self-hosted services",
-      "scope": "Only reachable from my internal network",
-      "description": "Self-hosted services in Docker containers, reachable through my own domain names on sserra.dev, so I do not depend on third-party services.",
+      "scope": "Internal network and private VPN only",
+      "description": "Self-hosted services in Docker containers, reachable through my own domain names on sserra.dev, to keep control of my services and my data.",
       "groups": [
         {
           "name": "Administration & development",
@@ -227,6 +227,10 @@
             {
               "name": "NGINX",
               "description": "Reverse proxy with my own domain names"
+            },
+            {
+              "name": "Tailscale",
+              "description": "Private remote access to the services through a VPN"
             }
           ]
         },
@@ -249,6 +253,7 @@
         "Docker Compose",
         "NGINX",
         "DNS",
+        "VPN",
         "Self-hosting"
       ]
     },

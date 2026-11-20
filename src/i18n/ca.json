@@ -180,8 +180,8 @@
     "ownIntro": "El que construeixo i mantinc pel meu compte:",
     "own": {
       "name": "Homelab: serveis autoallotjats",
-      "scope": "Accessible només des de la meva xarxa interna",
-      "description": "Serveis autoallotjats en contenidors Docker, accessibles amb noms de domini propis sobre sserra.dev, per no dependre de serveis de tercers.",
+      "scope": "Només xarxa interna i VPN privada",
+      "description": "Serveis autoallotjats en contenidors Docker, accessibles amb noms de domini propis sobre sserra.dev, per tenir el control dels meus serveis i de les meves dades.",
       "groups": [
         {
           "name": "Administració i desenvolupament",
@@ -227,6 +227,10 @@
             {
               "name": "NGINX",
               "description": "Reverse proxy amb noms de domini propis"
+            },
+            {
+              "name": "Tailscale",
+              "description": "Accés remot privat als serveis mitjançant VPN"
             }
           ]
         },
@@ -249,6 +253,7 @@
         "Docker Compose",
         "NGINX",
         "DNS",
+        "VPN",
         "Self-hosting"
       ]
     },
