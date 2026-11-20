@@ -69,30 +69,15 @@
   --color-primary: #2250d8;
   --color-primary-hover: #1a3fb0;
   --color-on-primary: #ffffff;
-  --color-accent: #7c3aed;
   --color-cyan: #0e8a99;
 
   --color-tag-bg: #eaf0fd;
   --color-tag-text: #1a3fb0;
   --color-tag-border: #d4defa;
 
-  /* Gradientes de marca */
-  --gradient-brand: linear-gradient(
-    135deg,
-    #2250d8 0%,
-    #6d3aed 55%,
-    #0e8a99 100%
-  );
-  --gradient-text: linear-gradient(120deg, #2250d8 0%, #7c3aed 60%, #0e7490 100%);
-
-  /* Botón primario: texto blanco >= 5,3:1 en todo el degradado */
-  --gradient-btn: linear-gradient(
-    135deg,
-    #1f47c4 0%,
-    #5b34d6 55%,
-    #0b7683 100%
-  );
-  --color-on-brand: #ffffff;
+  /* Degradado de marca: solo en detalles decorativos pequeños (subrayado del menú,
+     barra de tarjeta, marco de "Sobre mí"). Azul → cian, sin violeta. */
+  --gradient-brand: linear-gradient(135deg, #2250d8 0%, #0e8a99 100%);
 
   /* Etiquetas neutras (contenido no interactivo) */
   --chip-bg: #eef1f7;
@@ -102,8 +87,9 @@
   /* Relieve interior de las tarjetas (solo visible en oscuro) */
   --card-inset: 0 0 0 0 transparent;
 
-  /* Intensidad de los resplandores del hero */
-  --glow-k: 1;
+  /* Intensidad de los resplandores y de la cuadrícula del hero */
+  --glow-k: 1.35;
+  --grid-o: 0.85;
 
   /* Elevación común al pasar el ratón por tarjetas */
   --lift: -3px;
@@ -111,10 +97,10 @@
   /* Borde de controles (botones): >= 3:1 sobre el fondo (WCAG 1.4.11) */
   --border-ui: #7f8ba3;
 
-  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06),
-    0 1px 3px rgba(16, 24, 40, 0.08);
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05),
+    0 4px 14px rgba(34, 80, 216, 0.07);
   --shadow: 0 4px 12px rgba(16, 24, 40, 0.08),
-    0 12px 32px rgba(16, 24, 40, 0.1);
+    0 12px 32px rgba(34, 80, 216, 0.11);
   --shadow-lg: 0 12px 28px rgba(16, 24, 40, 0.12),
     0 24px 60px rgba(16, 24, 40, 0.14);
   --ring: 0 0 0 3px color-mix(in srgb, var(--color-primary) 35%, transparent);
@@ -123,9 +109,9 @@
 :root[data-theme="dark"] {
   --color-bg: #0b0e14;
   --color-bg-alt: #0f1521;
-  --color-surface: #151b28;
-  --color-surface-2: #1a2130;
-  --color-border: #28303f;
+  --color-surface: #181f2e;
+  --color-surface-2: #1d2536;
+  --color-border: #2d3647;
   --color-border-strong: #3a455a;
   --color-text: #eef1f8;
   --color-text-muted: #a9b2c4;
@@ -134,29 +120,13 @@
   --color-primary: #7aa2ff;
   --color-primary-hover: #9bbaff;
   --color-on-primary: #0b0e14;
-  --color-accent: #b794f6;
   --color-cyan: #4fd6e0;
 
   --color-tag-bg: #1a2740;
   --color-tag-text: #add0ff;
   --color-tag-border: #2a3b5c;
 
-  --gradient-brand: linear-gradient(
-    135deg,
-    #7aa2ff 0%,
-    #b794f6 55%,
-    #4fd6e0 100%
-  );
-  --gradient-text: linear-gradient(
-    120deg,
-    #8fb0ff 0%,
-    #c4a6ff 55%,
-    #5fe0ea 100%
-  );
-
-  /* Degradado pastel: el texto del botón pasa a oscuro (7,7 a 11:1) */
-  --gradient-btn: var(--gradient-brand);
-  --color-on-brand: #0b0e14;
+  --gradient-brand: linear-gradient(135deg, #7aa2ff 0%, #4fd6e0 100%);
 
   --chip-bg: #1a2130;
   --chip-text: #c3cbdb;
@@ -164,6 +134,7 @@
 
   --card-inset: inset 0 1px 0 rgb(255 255 255 / 0.05);
   --glow-k: 1.7;
+  --grid-o: 0.5;
   --border-ui: #5e6a82;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -298,6 +269,11 @@ main {
 
 .section--alt {
   background-color: var(--color-bg-alt);
+  background-image: radial-gradient(
+    44rem 22rem at 100% 0%,
+    color-mix(in srgb, var(--color-primary) 6%, transparent),
+    transparent 70%
+  );
   border-block: 1px solid var(--color-border);
 }
 
@@ -381,12 +357,13 @@ main {
 }
 
 .btn--primary {
-  background: var(--gradient-btn);
-  color: var(--color-on-brand);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
   box-shadow: var(--shadow-sm);
 }
 
 .btn--primary:hover {
+  background: var(--color-primary-hover);
   box-shadow: var(--shadow);
 }
 
@@ -425,14 +402,34 @@ main {
 }
 
 .site-header__brand {
-  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: -0.02em;
   color: var(--color-text);
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+
+/* Símbolo de marca: cubo isométrico en tres tonos del azul de marca */
+.brand-mark {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.brand-mark__top,
+.brand-mark__left,
+.brand-mark__right {
+  fill: var(--color-primary);
+}
+
+.brand-mark__left {
+  fill-opacity: 0.68;
+}
+
+.brand-mark__right {
+  fill-opacity: 0.42;
 }
 
 .site-header__brand:hover {
@@ -537,7 +534,7 @@ main {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--border-ui);
   background: var(--color-surface);
   color: var(--color-text);
   cursor: pointer;
@@ -580,7 +577,7 @@ main {
   font-weight: 500;
   padding: 0.55rem 2rem 0.55rem 0.85rem;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--border-ui);
   background-color: var(--color-surface);
   color: var(--color-text);
   cursor: pointer;
@@ -613,7 +610,7 @@ main {
   inset: 0;
   background: radial-gradient(
       46rem 30rem at 82% -12%,
-      color-mix(in srgb, var(--color-accent) calc(20% * var(--glow-k)), transparent),
+      color-mix(in srgb, var(--color-primary) calc(20% * var(--glow-k)), transparent),
       transparent 70%
     ),
     radial-gradient(
@@ -651,7 +648,7 @@ main {
     #000 10%,
     transparent 75%
   );
-  opacity: 0.5;
+  opacity: var(--grid-o);
   z-index: -1;
 }
 
@@ -686,10 +683,7 @@ main {
   letter-spacing: -0.035em;
   line-height: 1.05;
   margin-bottom: var(--space-xs);
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
 }
 
 .hero__role {
@@ -712,7 +706,7 @@ main {
   align-items: center;
   gap: var(--space-xs);
   margin-bottom: var(--space-lg);
-  padding: 0.45rem 0.9rem;
+  padding: 0.35rem 0.95rem 0.35rem 0.4rem;
   border-radius: var(--radius-pill);
   font-size: 0.92rem;
   font-weight: 650;
@@ -724,8 +718,22 @@ main {
     box-shadow var(--transition);
 }
 
-.hero__certs-badge svg {
-  color: var(--color-primary);
+/* Pila de miniaturas de los badges oficiales (decorativa) */
+.badge-stack {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.badge-stack img {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--color-surface);
+}
+
+.badge-stack img + img {
+  margin-left: -0.55rem;
 }
 
 .hero__certs-badge:hover {
@@ -748,9 +756,9 @@ main {
 }
 
 .btn--cv {
-  background-color: transparent;
-  color: var(--color-text-muted);
-  border: 1px dashed var(--border-ui);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--border-ui);
   padding: 0.6rem 1.1rem;
   font-size: 0.9rem;
 }
@@ -758,7 +766,6 @@ main {
 .btn--cv:hover {
   color: var(--color-primary);
   border-color: var(--color-primary);
-  border-style: solid;
 }
 
 /* Hero a dos columnas: texto + ilustración (solo en pantallas anchas) */
@@ -793,6 +800,9 @@ main {
     height: auto;
     margin-inline: auto;
     overflow: visible;
+    filter: drop-shadow(
+      0 24px 40px color-mix(in srgb, var(--color-primary) 16%, transparent)
+    );
   }
 }
 
@@ -802,19 +812,18 @@ main {
 }
 
 .art-stop--b {
-  stop-color: var(--color-accent);
+  stop-color: var(--color-cyan);
 }
 
 .art-org {
-  fill: color-mix(in srgb, var(--color-surface) 55%, transparent);
-  stroke: var(--color-border-strong);
+  fill: color-mix(in srgb, var(--color-primary) 4%, transparent);
+  stroke: color-mix(in srgb, var(--color-primary) 28%, var(--color-border-strong));
   stroke-width: 1.5;
-  stroke-dasharray: 3 7;
 }
 
 .art-box {
   fill: var(--color-surface);
-  stroke: var(--color-border-strong);
+  stroke: color-mix(in srgb, var(--color-primary) 30%, var(--color-border-strong));
   stroke-width: 1.5;
 }
 
@@ -841,7 +850,7 @@ main {
 
 .art-flow path {
   stroke: url(#art-grad);
-  stroke-width: 2.5;
+  stroke-width: 3;
   stroke-dasharray: 4 12;
   animation: art-flow 12s linear infinite;
 }
@@ -998,7 +1007,6 @@ main {
 }
 
 .skill-card:hover {
-  transform: translateY(var(--lift));
   border-color: var(--color-border-strong);
   box-shadow: var(--card-inset), var(--shadow);
 }
@@ -1163,7 +1171,6 @@ main {
 }
 
 .project-card:hover {
-  transform: translateY(var(--lift));
   box-shadow: var(--card-inset), var(--shadow);
   border-color: var(--color-border-strong);
 }
@@ -1173,7 +1180,7 @@ main {
 }
 
 .project-card__name {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 650;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -1193,7 +1200,10 @@ main {
   gap: var(--space-xs);
   margin-top: auto;
   padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border);
+}
+
+.project-card__tags .tag {
+  font-size: 0.8125rem;
 }
 
 /* Bloques de la sección: experiencia profesional y proyectos propios */
@@ -1206,7 +1216,7 @@ main {
 }
 
 .projects__subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: var(--space-2xs);
   color: var(--color-text);
@@ -1251,7 +1261,7 @@ main {
 }
 
 .own-card__name {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 650;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -1513,6 +1523,19 @@ main {
   }
 }
 
+/* Pantallas muy estrechas: marca algo más compacta para no tocar los controles */
+@media (max-width: 380px) {
+  .site-header__brand {
+    gap: 0.45rem;
+    font-size: 1rem;
+  }
+
+  .brand-mark {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
 @media (max-width: 560px) {
   .container {
     padding-inline: var(--space-md);
@@ -1528,6 +1551,8 @@ main {
 
   .hero__actions .btn {
     flex: 1 1 auto;
+    padding-inline: 1.1rem;
+    font-size: 1rem;
   }
 
   .contact__links {
@@ -1575,9 +1600,10 @@ main {
   top: calc(var(--space-lg) / -2);
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
   line-height: 1;
-  color: var(--color-text-subtle);
+  color: var(--color-primary);
   pointer-events: none;
 }
 
@@ -1606,10 +1632,7 @@ main {
   font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
 }
 
 .vibe-flow__name {
@@ -1660,6 +1683,7 @@ main {
 
   .vibe-flow__end {
     flex-direction: column;
+    align-self: center;
     padding-inline: var(--space-lg);
   }
 }
@@ -1868,9 +1892,15 @@ main {
    Certifications (official badge grid)
    ============================================================ */
 .certs__badges {
+  position: relative;
+  overflow: hidden;
   list-style: none;
   margin: 0 0 var(--space-xl);
-  padding: 0;
+  padding: var(--space-xl) var(--space-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--card-inset), var(--shadow-sm);
   display: grid;
   /* 8 certificaciones: 2 x 4 en móvil, 4 x 2 desde tablet (sin huérfanos) */
   grid-template-columns: repeat(2, 1fr);
@@ -1884,7 +1914,22 @@ main {
   }
 }
 
+/* Foco de luz suave en la parte alta del panel */
+.certs__badges::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 60%;
+  background: radial-gradient(
+    40rem 14rem at 50% 0%,
+    color-mix(in srgb, var(--color-primary) 8%, transparent),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
 .cert-badge {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1899,16 +1944,11 @@ main {
 }
 
 .cert-badge__img {
-  width: 8.5rem;
-  height: 8.5rem;
+  width: 9rem;
+  height: 9rem;
   object-fit: contain;
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.18));
   transition: transform 0.25s ease, filter 0.25s ease;
-}
-
-.cert-badge:hover .cert-badge__img {
-  transform: translateY(-4px) scale(1.04);
-  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.28));
 }
 
 .cert-badge__name {
@@ -1916,7 +1956,6 @@ main {
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.35;
-  min-height: 2.7em; /* reserva 2 líneas para alinear los años entre columnas */
 }
 
 /* Marca flotante sobre el badge (caducada) */
@@ -1940,7 +1979,10 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 0.15rem;
-  margin-top: -0.35rem;
+  margin-top: auto; /* ancla el bloque de años al pie de la tarjeta */
+  padding-top: 0.1rem;
+  min-height: calc(2 * 1.35em + 0.15rem); /* reserva 2 líneas: "Obtenida" siempre a la misma altura */
+  justify-content: flex-start;
   font-size: 0.78rem;
   line-height: 1.35;
   color: var(--color-text-muted);
@@ -1974,10 +2016,6 @@ main {
   filter: grayscale(0.5) drop-shadow(0 6px 16px rgba(0, 0, 0, 0.18));
 }
 
-.cert-badge--expired:hover .cert-badge__img {
-  opacity: 0.8;
-}
-
 .certs__cta {
   display: flex;
   justify-content: center;
@@ -1985,8 +2023,26 @@ main {
 }
 
 @media (max-width: 560px) {
+  .certs__badges {
+    padding: var(--space-lg) var(--space-md);
+    gap: var(--space-lg) var(--space-md);
+  }
+
   .cert-badge__img {
     width: 7rem;
     height: 7rem;
+  }
+}
+
+/* Ritmo: "Sobre mí" no tiene intro, así que se separa la rejilla del título */
+.section__title + .about__grid {
+  margin-top: var(--space-lg);
+}
+
+/* Móvil: tarjetas algo más compactas para acortar la página sin quitar contenido */
+@media (max-width: 560px) {
+  .project-card,
+  .vibe-flow__step {
+    padding: var(--space-md);
   }
 }

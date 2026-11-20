@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sergi Serra — IT Professional Profile",
-    "description": "Personal website of Sergi Serra. IT-focused professional profile: experience, skills and projects."
+    "title": "Sergi Serra — Cloud Engineer & Architect · Google Cloud",
+    "description": "Sergi Serra, Cloud Engineer & Architect specialized in Google Cloud: migrations, landing zones and security. Experience, certifications and projects."
   },
   "notFound": {
     "title": "Page not found",
@@ -35,7 +35,7 @@
     "greeting": "Hi, I'm",
     "name": "Sergi Serra",
     "role": "Cloud Engineer & Architect",
-    "tagline": "I build robust and scalable cloud solutions, with attention to security using Google Cloud",
+    "tagline": "Cloud professional specialized in Google Cloud: migrations, landing zones and security.",
     "ctaProjects": "View projects",
     "ctaContact": "Get in touch",
     "cvEs": "CV (Spanish)",
@@ -44,14 +44,14 @@
   },
   "about": {
     "title": "About me",
-    "paragraph1": "IT professional specialized in Cloud solutions on Google Cloud Platform, with a proven track record leading critical migrations and designing scalable, high-availability architectures.",
-    "paragraph2": "I get fully involved in every project, with strong attention to detail and to the client's real needs. I enjoy the didactic side of my work: answering questions and guiding teams so they get the most out of Google Cloud Platform. I combine this way of working with a constant interest in AI applied to the cloud and automation.",
+    "paragraph1": "IT professional specialized in cloud solutions on Google Cloud Platform, leading critical migrations and designing scalable, high-availability architectures.",
+    "paragraph2": "I get involved in every project, paying close attention to the details and, above all, to what the client actually needs. I enjoy the teaching side of my work: answering questions and guiding teams so they get the most out of Google Cloud Platform. I'm also interested in AI applied to the cloud and automation.",
     "highlightsTitle": "In a nutshell",
     "highlights": [
       "Specialist in cloud infrastructure",
       "+4 years of experience in Google Cloud Platform",
       "Specialized in migrating workloads to the cloud",
-      "Focus on applying best practices in security"
+      "Attention to security and best practices"
     ]
   },
   "skills": {
@@ -96,7 +96,7 @@
   },
   "certs": {
     "title": "Certifications",
-    "intro": "Official Google Cloud certifications. All verifiable on my public Credly profile.",
+    "intro": "Official Google Cloud certifications and one from HashiCorp, now expired. The Google Cloud ones can be verified on my public Credly profile.",
     "verifyAll": "View all on Credly",
     "levelAssociate": "Associate",
     "levelProfessional": "Professional",
@@ -174,7 +174,7 @@
   },
   "projects": {
     "title": "Projects",
-    "intro": "A selection of projects I've worked on and led:",
+    "intro": "Selected professional projects, without naming clients:",
     "workTitle": "Professional experience",
     "ownTitle": "Personal projects",
     "ownIntro": "What I build and maintain on my own:",
@@ -310,7 +310,7 @@
   },
   "vibe": {
     "title": "Vibe Coding",
-    "intro": "This website —and other projects on my GitHub— is developed with the help of artificial intelligence. I believe in transparency: I don't hide my use of AI, I present it as a skill I'm proficient in. The value isn't in \"generating code\", but in directing the tools with technical judgment, defining good requirements and verifying the result.",
+    "intro": "This website —and other projects on my GitHub— is developed with the help of artificial intelligence, and I say so openly. The value isn't in \"generating code\", but in directing the tools with technical judgment, defining good requirements and verifying the result.",
     "workflowTitle": "Real workflow & stack",
     "workflowIntro": "The workflow I used to ship this very website:",
     "diagramStart": "Prompt",
@@ -367,7 +367,7 @@
   },
   "contact": {
     "title": "Contact",
-    "intro": "Looking for someone like me? I'd love to talk. You can reach me through the channels below.",
+    "intro": "If you are looking for a cloud profile specialized in Google Cloud, let's talk. These are the channels where you can find me.",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub"
   },

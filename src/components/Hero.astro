@@ -16,20 +16,12 @@ const { t } = Astro.props;
       <h1 class="hero__name">{t.hero.name}</h1>
       <p class="hero__role">{t.hero.role}</p>
       <a class="hero__certs-badge" href="#certs">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path d="M9 12l2 2 4-4"></path>
-          <circle cx="12" cy="12" r="9"></circle>
-        </svg>
+        <span class="badge-stack" aria-hidden="true">
+          <img src="/badges/professional_cloud_architect.webp" alt="" width="28" height="28" decoding="async" />
+          <img src="/badges/professional_network_engineer.webp" alt="" width="28" height="28" decoding="async" />
+          <img src="/badges/professional_devops_engineer.webp" alt="" width="28" height="28" decoding="async" />
+          <img src="/badges/professional_security_engineer.webp" alt="" width="28" height="28" decoding="async" />
+        </span>
         <span>{t.hero.certsBadge}</span>
       </a>
       <p class="hero__tagline">{t.hero.tagline}</p>
@@ -126,10 +118,10 @@ const { t } = Astro.props;
           <path d="M274 306 C 244 306 240 260 240 226"></path>
         </g>
 
-        <circle class="art-node" cx="206" cy="94" r="6"></circle>
-        <circle class="art-node" cx="274" cy="94" r="6"></circle>
-        <circle class="art-node" cx="206" cy="306" r="6"></circle>
-        <circle class="art-node" cx="274" cy="306" r="6"></circle>
+        <circle class="art-node" cx="206" cy="94" r="7"></circle>
+        <circle class="art-node" cx="274" cy="94" r="7"></circle>
+        <circle class="art-node" cx="206" cy="306" r="7"></circle>
+        <circle class="art-node" cx="274" cy="306" r="7"></circle>
 
         <!-- Hub de red con escudo -->
         <circle class="art-hub-ring" cx="240" cy="200" r="36"></circle>

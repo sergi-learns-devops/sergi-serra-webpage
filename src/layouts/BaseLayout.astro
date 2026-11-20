@@ -56,8 +56,19 @@ const personSchema = {
   name: "Sergi Serra",
   jobTitle: "Cloud Engineer & Architect",
   url: siteUrl.href,
+  description: t.meta.description,
+  image: ogImageURL,
   email: `mailto:${siteConfig.email}`,
   sameAs: [siteConfig.linkedin, siteConfig.github, siteConfig.credly],
+  // Solo certificaciones de Google Cloud vigentes (la de HashiCorp está caducada)
+  hasCredential: t.certs.items
+    .filter((c) => !c.issuer && c.status !== "expired")
+    .map((c) => ({
+      "@type": "EducationalOccupationalCredential",
+      name: c.name,
+      credentialCategory: "certification",
+      recognizedBy: { "@type": "Organization", name: "Google Cloud" },
+    })),
   knowsAbout: [
     "Google Cloud Platform",
     "Terraform",
@@ -149,7 +160,17 @@ const personSchema = {
     <header class="site-header">
       <div class="container site-header__inner">
         <a class="site-header__brand" href={localizedPath(lang)}>
-          Sergi&nbsp;<span>Serra</span>
+          <svg
+            class="brand-mark"
+            viewBox="0 0 64 64"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <polygon class="brand-mark__top" points="32,7 53.65,19.5 32,32 10.35,19.5"></polygon>
+            <polygon class="brand-mark__left" points="10.35,19.5 32,32 32,57 10.35,44.5"></polygon>
+            <polygon class="brand-mark__right" points="32,32 53.65,19.5 53.65,44.5 32,57"></polygon>
+          </svg>
+          <span>Sergi Serra</span>
         </a>
 
         <nav class="site-nav" aria-label={t.nav.menu}>

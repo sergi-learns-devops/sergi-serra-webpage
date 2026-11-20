@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sergi Serra — Perfil profesional TI",
-    "description": "Página personal de Sergi Serra. Perfil profesional orientado a tecnologías de la información: experiencia, habilidades y proyectos."
+    "title": "Sergi Serra — Cloud Engineer & Architect · Google Cloud",
+    "description": "Sergi Serra, Cloud Engineer & Architect especializado en Google Cloud: migraciones, landing zones y seguridad. Experiencia, certificaciones y proyectos."
   },
   "notFound": {
     "title": "Página no encontrada",
@@ -35,7 +35,7 @@
     "greeting": "Hola, soy",
     "name": "Sergi Serra",
     "role": "Cloud Engineer & Architect",
-    "tagline": "Diseño e implemento soluciones cloud robustas y escalables, con atención a la seguridad usando la nube de Google Cloud",
+    "tagline": "Profesional cloud especializado en Google Cloud: migraciones, landing zones y seguridad.",
     "ctaProjects": "Ver proyectos",
     "ctaContact": "Contacta conmigo",
     "cvEs": "CV (Castellano)",
@@ -44,14 +44,14 @@
   },
   "about": {
     "title": "Sobre mí",
-    "paragraph1": "Profesional IT especializado en soluciones Cloud sobre Google Cloud Platform, con una trayectoria consolidada liderando migraciones críticas y diseñando arquitecturas escalables y de alta disponibilidad.",
-    "paragraph2": "Me implico de lleno en cada proyecto, con una fuerte atención al detalle y a las necesidades reales del cliente. Disfruto del lado didáctico de mi trabajo: resolver dudas y acompañar a los equipos para que saquen el máximo partido a Google Cloud Platform. Combino esta forma de trabajar con un interés constante por la IA aplicada al cloud y la automatización.",
+    "paragraph1": "Profesional de TI especializado en soluciones cloud sobre Google Cloud Platform, liderando migraciones críticas y diseñando arquitecturas escalables y de alta disponibilidad.",
+    "paragraph2": "Me implico en cada proyecto cuidando los detalles y, sobre todo, las necesidades reales del cliente. Disfruto del lado didáctico de mi trabajo: resolver dudas y acompañar a los equipos para que saquen el máximo partido a Google Cloud Platform. Además, me interesa la IA aplicada al cloud y a la automatización.",
     "highlightsTitle": "En pocas palabras",
     "highlights": [
       "Especialista en infraestructura cloud",
       "+4 años de experiencia en Google Cloud Platform",
       "Especializado en migraciones de workloads a cloud",
-      "Enfoque en seguir buenas prácticas de seguridad"
+      "Atención a la seguridad y a las buenas prácticas"
     ]
   },
   "skills": {
@@ -96,7 +96,7 @@
   },
   "certs": {
     "title": "Certificaciones",
-    "intro": "Certificaciones oficiales de Google Cloud. Todas verificables en mi perfil público de Credly.",
+    "intro": "Certificaciones oficiales de Google Cloud y una de HashiCorp, ya caducada. Las de Google Cloud se pueden verificar en mi perfil público de Credly.",
     "verifyAll": "Ver todas en Credly",
     "levelAssociate": "Associate",
     "levelProfessional": "Professional",
@@ -174,7 +174,7 @@
   },
   "projects": {
     "title": "Proyectos",
-    "intro": "Una selección de proyectos en los que he trabajado y liderado:",
+    "intro": "Proyectos profesionales seleccionados, sin nombrar clientes:",
     "workTitle": "Experiencia profesional",
     "ownTitle": "Proyectos propios",
     "ownIntro": "Lo que construyo y mantengo por mi cuenta:",
@@ -310,7 +310,7 @@
   },
   "vibe": {
     "title": "Vibe Coding",
-    "intro": "Esta web —y otros proyectos de mi GitHub— está desarrollada con asistencia de inteligencia artificial. Creo en la transparencia: no escondo el uso de IA, sino que lo presento como una competencia que domino. El valor no está en «generar código», sino en dirigir las herramientas con criterio técnico, definir buenos requisitos y verificar el resultado.",
+    "intro": "Esta web —y otros proyectos de mi GitHub— está desarrollada con asistencia de inteligencia artificial, y lo digo abiertamente. El valor no está en «generar código», sino en dirigir las herramientas con criterio técnico, definir buenos requisitos y verificar el resultado.",
     "workflowTitle": "Workflow y stack real",
     "workflowIntro": "Flujo de trabajo que utilicé para desplegar esta misma web:",
     "diagramStart": "Prompt",
@@ -367,7 +367,7 @@
   },
   "contact": {
     "title": "Contacto",
-    "intro": "¿Buscas a alguien como yo? Me encantará hablar contigo. Puedes contactarme por los siguientes canales.",
+    "intro": "Si buscas un perfil cloud especializado en Google Cloud, podemos hablar. Estos son los canales donde encontrarme.",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub"
   },

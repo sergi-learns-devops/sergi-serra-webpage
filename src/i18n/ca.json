@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sergi Serra — Perfil professional TI",
-    "description": "Pàgina personal de Sergi Serra. Perfil professional orientat a tecnologies de la informació: experiència, habilitats i projectes."
+    "title": "Sergi Serra — Cloud Engineer & Architect · Google Cloud",
+    "description": "Sergi Serra, Cloud Engineer & Architect especialitzat en Google Cloud: migracions, landing zones i seguretat. Experiència, certificacions i projectes."
   },
   "notFound": {
     "title": "Pàgina no trobada",
@@ -35,7 +35,7 @@
     "greeting": "Hola, soc",
     "name": "Sergi Serra",
     "role": "Cloud Engineer & Architect",
-    "tagline": "Dissenyo i implemento solucions cloud robustes i escalables, amb atenció per la seguretat utilitzant el núvol de Google Cloud",
+    "tagline": "Professional cloud especialitzat en Google Cloud: migracions, landing zones i seguretat.",
     "ctaProjects": "Veure projectes",
     "ctaContact": "Contacta amb mi",
     "cvEs": "CV (Castellà)",
@@ -44,14 +44,14 @@
   },
   "about": {
     "title": "Sobre mi",
-    "paragraph1": "Professional IT especialitzat en solucions Cloud sobre Google Cloud Platform, amb una trajectòria consolidada liderant migracions crítiques i dissenyant arquitectures escalables i d'alta disponibilitat.",
-    "paragraph2": "M'implico de ple en cada projecte, amb una gran atenció al detall i a les necessitats reals del client. Gaudeixo de la vessant didàctica de la meva feina: resoldre dubtes i acompanyar els equips perquè treguin el màxim partit de Google Cloud Platform. Combino aquesta manera de treballar amb un interès constant per la IA aplicada al cloud i l'automatització.",
+    "paragraph1": "Professional de TI especialitzat en solucions cloud sobre Google Cloud Platform, liderant migracions crítiques i dissenyant arquitectures escalables i d'alta disponibilitat.",
+    "paragraph2": "M'implico en cada projecte cuidant els detalls i, sobretot, les necessitats reals del client. Gaudeixo de la vessant didàctica de la meva feina: resoldre dubtes i acompanyar els equips perquè treguin el màxim partit de Google Cloud Platform. A més, m'interessa la IA aplicada al cloud i a l'automatització.",
     "highlightsTitle": "En poques paraules",
     "highlights": [
       "Especialista en infraestructura cloud",
       "+4 anys d'experiència amb Google Cloud Platform",
       "Especialitzat en migracions de workloads a cloud",
-      "Enfocament en seguir bones pràctiques de seguretat"
+      "Atenció a la seguretat i a les bones pràctiques"
     ]
   },
   "skills": {
@@ -96,7 +96,7 @@
   },
   "certs": {
     "title": "Certificacions",
-    "intro": "Certificacions oficials de Google Cloud. Totes verificables al meu perfil públic de Credly.",
+    "intro": "Certificacions oficials de Google Cloud i una de HashiCorp, ja caducada. Les de Google Cloud es poden verificar al meu perfil públic de Credly.",
     "verifyAll": "Veure totes a Credly",
     "levelAssociate": "Associate",
     "levelProfessional": "Professional",
@@ -174,7 +174,7 @@
   },
   "projects": {
     "title": "Projectes",
-    "intro": "Una selecció de projectes en els què he treballat i liderat:",
+    "intro": "Projectes professionals seleccionats, sense esmentar clients:",
     "workTitle": "Experiència professional",
     "ownTitle": "Projectes propis",
     "ownIntro": "El que construeixo i mantinc pel meu compte:",
@@ -310,7 +310,7 @@
   },
   "vibe": {
     "title": "Vibe Coding",
-    "intro": "Aquesta web —i altres projectes del meu GitHub— està desenvolupada amb assistència d'intel·ligència artificial. Crec en la transparència: no amago l'ús d'IA, sinó que el presento com una competència que domino. El valor no és «generar codi», sinó dirigir les eines amb criteri tècnic, definir bons requisits i verificar el resultat.",
+    "intro": "Aquesta web —i altres projectes del meu GitHub— està desenvolupada amb assistència d'intel·ligència artificial, i ho dic obertament. El valor no és «generar codi», sinó dirigir les eines amb criteri tècnic, definir bons requisits i verificar el resultat.",
     "workflowTitle": "Workflow i stack real",
     "workflowIntro": "Flux de treball que vaig fer servir per desplegar aquesta mateixa web:",
     "diagramStart": "Prompt",
@@ -367,7 +367,7 @@
   },
   "contact": {
     "title": "Contacte",
-    "intro": "Estàs buscant algú com jo? M'encantarà parlar amb tu. Pots contactar-me pels següents canals.",
+    "intro": "Si busques un perfil cloud especialitzat en Google Cloud, podem parlar. Aquests són els canals on trobar-me.",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub"
   },
