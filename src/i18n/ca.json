@@ -359,6 +359,11 @@
     "projectsIntro": "Altres projectes del meu GitHub desenvolupats amb aquest mateix enfocament:",
     "projects": [
       {
+        "name": "TerraMorph (En construcció)",
+        "description": "Aplicació d'enginyeria inversa de recursos cloud amb Terraform i IA. Permet extreure la configuració de recursos existents a GCP i AWS i generar arxius Terraform per a la gestió d'infraestructura com a codi.",
+        "url": "https://github.com/sergi-learns-devops/terramorph"
+      },
+      {
         "name": "ProgramacioDocent",
         "description": "Aplicació portable per a docents. Permet organitzar i gestionar la programació docent de manera senzilla i eficaç.",
         "url": "https://github.com/sergi-learns-devops/ProgramacioDocent"

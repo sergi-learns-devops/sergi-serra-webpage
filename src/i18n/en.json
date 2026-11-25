@@ -359,6 +359,11 @@
     "projectsIntro": "Other projects on my GitHub built with this same approach:",
     "projects": [
       {
+        "name": "TerraMorph (In progress)",
+        "description": "Reverse engineering application for cloud resources with Terraform and AI. Allows extracting the configuration of existing resources in GCP and AWS and generating Terraform files for infrastructure as code management.",
+        "url": "https://github.com/sergi-learns-devops/terramorph"
+      },
+      {
         "name": "ProgramacioDocent",
         "description": "A portable application for teachers. Allows organizing and managing teaching programming in a simple and efficient way.",
         "url": "https://github.com/sergi-learns-devops/ProgramacioDocent"
